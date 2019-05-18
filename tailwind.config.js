@@ -123,51 +123,24 @@ module.exports = {
     spacing: {
       px: '1px',
       '0': '0',
-      '1': '0.25rem',
-      '2': '0.5rem',
-      '3': '0.75rem',
-      '4': '1rem',
-      '5': '1.25rem',
-      '6': '1.5rem',
-      '8': '2rem',
-      '10': '2.5rem',
-      '12': '3rem',
-      '16': '4rem',
-      '20': '5rem',
-      '24': '6rem',
-      '32': '8rem',
-      '40': '10rem',
-      '48': '12rem',
-      '56': '14rem',
-      '64': '16rem',
+      '1': '.125rem',
+      '2': '.5rem',
+      '3': '1rem',
+      '4': '2rem',
+      '5': '4rem',
+      '6': '8rem'
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      small: '480px',
+      normal: '640px'
     },
     fontFamily: {
       sans: [
+        'Inter',
         '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
         '"Helvetica Neue"',
         'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: [
-        'Georgia',
-        'Cambria',
-        '"Times New Roman"',
-        'Times',
-        'serif',
+        'sans-serif'
       ],
       mono: [
         'Menlo',
@@ -179,35 +152,23 @@ module.exports = {
       ],
     },
     fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      tiny: '.875rem',
+      small: '1rem',
+      base: '1.125rem',
+      large: '1.25rem',
+      h1: '3.375rem',
+      h2: '2.25rem',
+      h3: '1.75rem',
     },
     fontWeight: {
-      hairline: '100',
-      thin: '200',
-      light: '300',
       normal: '400',
-      medium: '500',
-      semibold: '600',
-      bold: '700',
-      extrabold: '800',
-      black: '900',
+      emphasized: '500'
     },
     lineHeight: {
       none: '1',
       tight: '1.25',
-      snug: '1.375',
-      normal: '1.5',
-      relaxed: '1.625',
-      loose: '2',
+      normal: '1.75',
+      comfy: '2'
     },
     letterSpacing: {
       tighter: '-0.05em',
@@ -248,10 +209,7 @@ module.exports = {
     }),
     borderRadius: {
       none: '0',
-      sm: '0.125rem',
-      default: '0.25rem',
-      lg: '0.5rem',
-      full: '9999px',
+      normal: '.2rem'
     },
     cursor: {
       auto: 'auto',
@@ -420,7 +378,7 @@ module.exports = {
   variants: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColor: ['responsive', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -484,5 +442,9 @@ module.exports = {
     zIndex: ['responsive'],
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+    require('tailwindcss-transition')({
+      standard: 'all .3s ease'
+    })
+  ],
 }
