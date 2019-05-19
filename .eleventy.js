@@ -1,12 +1,15 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setTemplateFormats(['html', 'md'])
+  // Copy static assets
   eleventyConfig.addPassthroughCopy('site/static')
   eleventyConfig.addPassthroughCopy('site/favicon.png')
 
+  // Template configuration
+  eleventyConfig.setTemplateFormats(['html', 'md'])
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true
   })
 
+  // Paths
   const dir = {
     input: 'site',
     layouts: '_layouts'
