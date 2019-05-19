@@ -7,7 +7,7 @@
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{{ title }}</title>
+    <title>{% if title %}{{ title }} | {% endif %}Andreas' Site</title>
 
     <link rel="stylesheet" href="/static/styles.css" />
     <link rel="icon" href="/favicon.png" />
@@ -17,16 +17,13 @@
       antialiased
       font-sans
       leading-normal
+      px-3
       text-base
       text-gray-900
     ">
     <div class="container mx-auto">
       {% include 'nav' %}
-      {% include 'tagline' %}
-
-      <main>
-        {{ content }}
-      </main>
+      {{ content }}
     </div>
 
     <script src="/static/index.js" type="module"></script>
