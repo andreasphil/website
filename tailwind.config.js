@@ -28,9 +28,9 @@ module.exports = {
       small: '1rem',
       base: '1.125rem',
       large: '1.25rem',
-      h1: '3.375rem',
-      h2: '2.25rem',
-      h3: '1.75rem',
+      h1: '2rem',
+      h2: '1.5rem',
+      h3: '1.25rem',
     },
     fontWeight: {
       normal: '400',
@@ -45,7 +45,7 @@ module.exports = {
       none: '0',
       normal: '.4rem',
       full: '9999rem'
-    },
+    }
   },
   variants: {},
   plugins: [

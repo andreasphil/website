@@ -1,8 +1,3 @@
-{% assign active = false %}
-{% if page.url == url %}
-  {% assign active = true %}
-{% endif %}
-
 <a href="{{ url }}"
   title="{{ title }}"
   class="
@@ -15,9 +10,8 @@
     py-2
     rounded-normal
     small:inline
-    small:rounded-full
 
-    {% if active %}
+    {% if page.url == url %}
       bg-{{ color }}-200
       text-{{ color }}-700
     {% else %}
@@ -25,6 +19,6 @@
       text-gray-600
     {% endif %}
   ">
-  <span class="mr-2 small:mr-1">{{- icon -}}</span>
+  <span class="mr-2 normal:mr-1">{{- icon -}}</span>
   {{- title -}}
 </a>

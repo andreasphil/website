@@ -1,0 +1,16 @@
+---
+layout: _master
+---
+
+<div class="mb-6 mt-5">
+  <div class="my-5">
+    <h1 class="mb-2">{{ title }}</h1>
+    <div class="text-gray-600 text-small">
+      {{ page.date | date: "%A, %b %d, %Y" }}
+    </div>
+  </div>
+
+  <article>
+    {{ content }}
+  </article>
+</div>
