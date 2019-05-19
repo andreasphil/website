@@ -16,5 +16,14 @@ a:hover {
     text-indigo-500;
 }
 
+p {
+  @apply
+    my-3;
+}
+
+p:last-child {
+  @apply mb-0;
+}
+
 @tailwind components;
 @tailwind utilities;
