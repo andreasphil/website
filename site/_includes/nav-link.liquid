@@ -1,15 +1,30 @@
+{% assign active = false %}
+{% if page.url == url %}
+  {% assign active = true %}
+{% endif %}
+
 <a href="{{ url }}"
+  title="{{ title }}"
   class="
+    block
     border-none
     font-emphasized
-    hover:bg-{{ color }}-100
+    hover:bg-{{ color }}-200
     hover:text-{{ color }}-700
-    mx-1
     px-3
     py-2
-    rounded-full
-    text-gray-600
+    rounded-normal
+    small:inline
+    small:rounded-full
+
+    {% if active %}
+      bg-{{ color }}-200
+      text-{{ color }}-700
+    {% else %}
+      bg-transparent
+      text-gray-600
+    {% endif %}
   ">
-  </span>
+  <span class="mr-2 small:mr-1">{{- icon -}}</span>
   {{- title -}}
 </a>

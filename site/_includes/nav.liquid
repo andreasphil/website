@@ -4,15 +4,19 @@
     py-4
     text-small
   ">
-  <a href="#"
+  <a href="/"
+    title="About"
     class="
       border-none
       font-emphasized
       hover:bg-transparent
+      inline-block
+      mb-2
       mr-3
+      small:inline
       text-gray-900
     ">Andreas Philippi</a>
-  {% include 'nav-link', url: '#', title: '👋 About', icon: 'home', color: 'indigo' %}
-  {% include 'nav-link', url: '#', title: '📖 Blog', icon: 'edit-3', color: 'indigo' %}
-  {% include 'nav-link', url: '#', title: '🚀 Lab', icon: 'coffee', color: 'indigo' %}
+  {% include 'nav-link', url: '/', title: 'About', icon: '🏕', color: 'green' %}
+  {% include 'nav-link', url: '/blog/', title: '️Blog', icon: '✍️', color: 'orange' %}
+  {% include 'nav-link', url: '/labs/', title: 'Labs', icon: '🚀', color: 'red' %}
 </nav>
