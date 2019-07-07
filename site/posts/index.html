@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blog
+---
+
+{% for post in collections.posts %}
+<a href="{{ post.url }}"
+  class="
+    -mx-3
+    block
+    border-none
+    hover:bg-gray-100
+    px-3
+    py-3
+    small:rounded-normal
+    text-gray-900
+  ">
+  <h2 class="
+      font-emphasized
+      leading-normal
+      m-0
+      text-base
+    ">
+    {{ post.data.title }}
+  </h2>
+  <div class="
+      font-normal
+      mb-2
+      text-gray-600
+      text-small
+    ">
+    {{ post.date | date: "%b %d, %Y" }}
+  </div>
+  <p class="m-0 text-gray-900">
+    {% if post.data.excerpt %}
+      {{ post.data.excerpt }}
+    {% else %}
+      {{ post.templateContent | strip_html | truncatewords: 30, ' ...' }}
+    {% endif %}
+  </p>
+</a>
+{% endfor %}
