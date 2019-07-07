@@ -16,7 +16,7 @@
       small:inline
       text-gray-900
     ">Andreas Philippi</a>
-    {% for navLink in nav %}
+    {% for navLink in navLinks %}
       {% include 'nav-link', url: navLink.url, title: navLink.title, icon: navLink.icon, color: navLink.color %}
     {% endfor %}
 </nav>
