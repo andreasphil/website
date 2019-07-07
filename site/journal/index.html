@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Journal
 ---
 
 {% for post in collections.posts %}
@@ -9,9 +9,10 @@ title: Blog
     -mx-3
     block
     border-none
-    hover:bg-gray-100
+    #hover:bg-gray-100
+    mb-3
     px-3
-    py-3
+    py-2
     small:rounded-normal
     text-gray-900
   ">
@@ -35,7 +36,7 @@ title: Blog
     {% if post.data.excerpt %}
       {{ post.data.excerpt }}
     {% else %}
-      {{ post.templateContent | strip_html | truncatewords: 30, ' ...' }}
+      {{ post.templateContent | strip_html | truncatewords: 25, ' ...' }}
     {% endif %}
   </p>
 </a>

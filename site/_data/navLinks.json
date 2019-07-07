@@ -6,8 +6,8 @@
     "color": "green"
   },
   {
-    "url": "/posts/",
-    "title": "Posts",
+    "url": "/journal/",
+    "title": "Journal",
     "icon": "️✍️",
     "color": "orange"
   },
