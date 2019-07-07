@@ -16,7 +16,7 @@
       small:inline
       text-gray-900
     ">Andreas Philippi</a>
-  {% include 'nav-link', url: '/', title: 'About', icon: '🏕', color: 'green' %}
-  {% include 'nav-link', url: '/posts/', title: 'Posts', icon: '✍️', color: 'orange' %}
-  {% include 'nav-link', url: '/lab/', title: 'Lab', icon: '🚀', color: 'red' %}
+    {% for navLink in nav %}
+      {% include 'nav-link', url: navLink.url, title: navLink.title, icon: navLink.icon, color: navLink.color %}
+    {% endfor %}
 </nav>

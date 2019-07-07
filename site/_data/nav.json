@@ -1,0 +1,20 @@
+[
+  {
+    "url": "/",
+    "title": "About",
+    "icon": "🏕",
+    "color": "green"
+  },
+  {
+    "url": "/posts/",
+    "title": "Posts",
+    "icon": "️✍️",
+    "color": "orange"
+  },
+  {
+    "url": "/lab/",
+    "title": "Lab",
+    "icon": "🚀",
+    "color": "red"
+  }
+]
