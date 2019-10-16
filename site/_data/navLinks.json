@@ -12,8 +12,8 @@
     "color": "orange"
   },
   {
-    "url": "/lab/",
-    "title": "Lab",
+    "url": "/labs/",
+    "title": "Labs",
     "icon": "🚀",
     "color": "red"
   }
