@@ -582,6 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-weight: 600;
   margin-top: 4rem;
   font-size: 2rem
 }
@@ -3525,6 +3526,10 @@ mark {
   font-weight: 500;
 }
 
+.font-heavy {
+  font-weight: 600;
+}
+
 .hover\:font-normal:hover {
   font-weight: 400;
 }
@@ -3533,12 +3538,20 @@ mark {
   font-weight: 500;
 }
 
+.hover\:font-heavy:hover {
+  font-weight: 600;
+}
+
 .focus\:font-normal:focus {
   font-weight: 400;
 }
 
 .focus\:font-emphasized:focus {
   font-weight: 500;
+}
+
+.focus\:font-heavy:focus {
+  font-weight: 600;
 }
 
 .h-0 {
@@ -9151,6 +9164,10 @@ mark {
     font-weight: 500;
   }
 
+  .small\:font-heavy {
+    font-weight: 600;
+  }
+
   .small\:hover\:font-normal:hover {
     font-weight: 400;
   }
@@ -9159,12 +9176,20 @@ mark {
     font-weight: 500;
   }
 
+  .small\:hover\:font-heavy:hover {
+    font-weight: 600;
+  }
+
   .small\:focus\:font-normal:focus {
     font-weight: 400;
   }
 
   .small\:focus\:font-emphasized:focus {
     font-weight: 500;
+  }
+
+  .small\:focus\:font-heavy:focus {
+    font-weight: 600;
   }
 
   .small\:h-0 {
@@ -14774,6 +14799,10 @@ mark {
     font-weight: 500;
   }
 
+  .normal\:font-heavy {
+    font-weight: 600;
+  }
+
   .normal\:hover\:font-normal:hover {
     font-weight: 400;
   }
@@ -14782,12 +14811,20 @@ mark {
     font-weight: 500;
   }
 
+  .normal\:hover\:font-heavy:hover {
+    font-weight: 600;
+  }
+
   .normal\:focus\:font-normal:focus {
     font-weight: 400;
   }
 
   .normal\:focus\:font-emphasized:focus {
     font-weight: 500;
+  }
+
+  .normal\:focus\:font-heavy:focus {
+    font-weight: 600;
   }
 
   .normal\:h-0 {

@@ -34,7 +34,8 @@ module.exports = {
     },
     fontWeight: {
       normal: '400',
-      emphasized: '500'
+      emphasized: '500',
+      heavy: '600'
     },
     lineHeight: {
       none: '1',
