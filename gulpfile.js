@@ -32,4 +32,5 @@ exports.default = () => {
   build()
   watch('src/**/*.js', buildJs)
   watch('src/**/*.css', buildCss)
+  watch('tailwind.config.js', buildCss)
 }

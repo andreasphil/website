@@ -13,19 +13,12 @@
     <link rel="icon" href="/favicon.png" />
   </head>
 
-  <body class="
-      antialiased
-      font-sans
-      leading-normal
-      px-3
-      text-base
-      text-gray-800
-    ">
-    <div class="container mx-auto">
+  <body class="antialiased font-sans text-base text-gray-800 leading-normal">
+    <div class="container min-h-screen mx-auto px-3">
       {% include 'nav' %}
       {{ content }}
     </div>
-
+    {% include 'footer' %}
     <script src="/static/index.js" type="module"></script>
   </body>
 </html>

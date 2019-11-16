@@ -2,7 +2,10 @@
 layout: _master
 ---
 
-<main class="mb-6 mt-4">
-  <h1 class="mb-3 mt-4 text-large">{{ title }}</h1>
+<main class="mt-5 mb-6">
+  {% if title %}
+  <h1 class="text-h2 mt-4 mb-3">{{ title }}</h1>
+  {% endif %}
+
   {{ content }}
 </main>
