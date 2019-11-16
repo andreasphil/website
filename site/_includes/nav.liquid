@@ -1,22 +1,17 @@
-<nav class="
-    border-b
-    border-gray-200
-    py-4
-    text-small
-  ">
+<nav class="text-small border-b border-gray-200 py-4">
   <a href="/"
     title="About"
     class="
-      border-none
       font-emphasized
+      text-gray-800
       hover:bg-transparent
+      border-none
       inline-block
-      mb-2
-      mr-3
       small:inline
-      text-gray-900
+      mb-2
     ">Andreas Philippi</a>
-    {% for navLink in navLinks %}
-      {% include 'nav-link', url: navLink.url, title: navLink.title, icon: navLink.icon, color: navLink.color %}
-    {% endfor %}
+    {% if title %}
+    <span class="text-gray-400 mx-2">/</span>
+    <a href="{{ url }}">{{ title }}</a>
+    {% endif %}
 </nav>

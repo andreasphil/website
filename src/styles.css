@@ -1,34 +1,23 @@
 @tailwind base;
 
 h1, h2, h3, h4, h5, h6 {
-  @apply
-    font-emphasized
-    leading-tight
-    mb-3
-    text-large
+  @apply leading-tight text-large font-heavy mb-3
 }
 
 h1 {
-  @apply
-    font-heavy
-    mt-5
-    text-h1
+  @apply text-h1 mt-5
 }
 
 h2 {
-  @apply
-    mt-5
-    text-h2
+  @apply text-h2 mt-5
 }
 
 h3 {
-  @apply
-    mt-4
-    text-h3
+  @apply text-h3 mt-4
 }
 
 p {
-  @apply my-3;
+  @apply my-3
 }
 
 p:first-child {
@@ -40,44 +29,51 @@ p:last-child {
 }
 
 pre {
-  @apply
-    -mx-3
-    bg-gray-100
-    px-3
-    py-3
-    text-tiny
+  @apply bg-gray-100 text-tiny w-breakout-small my-4 -mx-3 px-3 py-3
+}
+
+blockquote {
+  @apply text-gray-600 px-4
 }
 
 @media (min-width: 480px) {
   pre {
-    @apply rounded-normal
+    @apply rounded
   }
 }
 
 img {
-  @apply max-w-full
+  @apply max-w-breakout-small my-4 -mx-3
+}
+
+@media (min-width: 480px) {
+  img {
+    @apply rounded-small
+  }
 }
 
 a {
-  @apply
-    border-b
-    border-gray-300
-    py-1
-    text-gray-600
-    transition
+  @apply border-b border-gray-200 text-gray-600 py-1 transition
 }
 
 a:hover {
-  @apply
-    bg-indigo-100
-    border-indigo-500
-    text-indigo-500
+  @apply bg-indigo-100 border-indigo-500 text-indigo-500
+}
+
+ul, ol {
+  @apply pl-4
+}
+
+ul > li {
+  @apply list-disc
+}
+
+ol > li {
+  @apply list-decimal
 }
 
 mark {
-  @apply
-    bg-orange-200
-    px-1
+  @apply bg-orange-200 px-1
 }
 
 @tailwind components;

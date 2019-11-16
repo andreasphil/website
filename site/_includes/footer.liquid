@@ -1,0 +1,9 @@
+<footer class="bg-gray-100 text-small">
+  <div class="container mx-auto px-3 py-4">
+    {% for link in social %}
+    <a href="{{ link.url }}" title="{{ link.title }}" target="_blank" rel="noreferrer" class="mr-3">
+      {{- link.title -}}
+    </a>
+    {% endfor %}
+  </div>
+</footer>

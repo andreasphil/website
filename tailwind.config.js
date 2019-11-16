@@ -1,5 +1,16 @@
 module.exports = {
   theme: {
+    extend: {
+      width: {
+        'breakout-small': 'calc(100% + 2rem)',
+        'breakout-large': 'calc(100% + 4rem)'
+      },
+      maxWidth: {
+        'breakout-small': 'calc(100% + 2rem)',
+        'breakout-large': 'calc(100% + 4rem)'
+      }
+    },
+
     spacing: {
       px: '1px',
       '0': '0',
@@ -12,7 +23,7 @@ module.exports = {
     },
     screens: {
       small: '480px',
-      normal: '768px'
+      normal: '640px'
     },
     fontFamily: {
       sans: [
@@ -43,8 +54,9 @@ module.exports = {
       normal: '1.75'
     },
     borderRadius: {
+      default: '.2rem',
       none: '0',
-      normal: '.4rem',
+      small: '.125rem',
       full: '9999rem'
     }
   },

@@ -1,0 +1,7 @@
+<ol class="p-0">
+  {% for post in collections.posts %}
+  <li class="border-b border-gray-200 py-3 leading-tight list-none">
+    <a class="border-none hover:bg-transparent" href="{{ post.url }}">{{ post.data.title }}</a>
+  </li>
+  {% endfor %}
+</ol>
