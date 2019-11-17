@@ -11,6 +11,15 @@ module.exports = {
       }
     },
 
+    colors: {
+      white: '#ffffff',
+      black: '#393e46',
+      steel: '#929aab',
+      smoke: '#eeeeee',
+      cloud: '#f7f7f7',
+      indigo: '#7971ea',
+      orange: '#eac371'
+    },
     spacing: {
       px: '1px',
       '0': '0',
@@ -69,7 +78,7 @@ module.exports = {
 
   plugins: [
     require('tailwindcss-transition')({
-      standard: 'all .3s ease'
+      standard: 'all .2s'
     })
   ]
 }

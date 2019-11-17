@@ -73,11 +73,11 @@ ol > li {
 }
 
 blockquote {
-  @apply text-gray-600 my-1 px-2
+  @apply text-steel my-1 px-2
 }
 
 pre {
-  @apply bg-gray-100 text-small w-breakout-1 -mx-1 my-2 px-2 py-1
+  @apply bg-cloud text-small w-breakout-1 -mx-1 my-2 px-2 py-1
 }
 @media (min-width: 640px) {
   pre {
@@ -99,15 +99,15 @@ img {
  * -------------------------------------------------- */
 
 a {
-  @apply border-b border-gray-200 text-gray-600 transition
+  @apply border-b border-smoke text-steel transition
 }
 
 a:hover {
-  @apply bg-indigo-100 border-indigo-500 text-indigo-500
+  @apply border-indigo text-indigo
 }
 
 mark {
-  @apply bg-orange-200 px-1/4
+  @apply bg-orange px-1/4
 }
 
 @tailwind components;
