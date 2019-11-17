@@ -10,6 +10,11 @@
     "description": "Visuals"
   },
   {
+    "title": "Blog",
+    "url": "/",
+    "description": "Thoughts"
+  },
+  {
     "title": "Linked In",
     "url": "https://linkedin.com/in/andreas-philippi",
     "description": "Experience"

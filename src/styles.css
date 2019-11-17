@@ -1,67 +1,67 @@
 @tailwind base;
 
+/* -------------------------------------------------- *
+ * Layout                                             *
+ * -------------------------------------------------- */
+
+.content {
+  @apply mx-auto mb-8
+}
+@media (min-width: 960px) {
+  .content {
+    @apply w-2/3
+  }
+}
+
+/* -------------------------------------------------- *
+ * Headlines                                          *
+ * -------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
-  @apply leading-tight text-large font-heavy mb-3
+  @apply leading-tight font-emphasized
 }
 
 h1 {
-  @apply text-h1 mt-5
+  @apply text-h1 mt-8 mb-1-1/2
 }
 
 h2 {
-  @apply text-h2 mt-5
+  @apply text-h2 mt-4 mb-1
 }
 
 h3 {
-  @apply text-h3 mt-4
+  @apply text-large mt-2 mb-1
 }
 
-p {
-  @apply my-3
+h4, h5, h6 {
+  @apply text-large mt-1 mb-1
 }
 
-p:first-child {
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
   @apply mt-0
 }
 
+/* -------------------------------------------------- *
+ * Blocks                                             *
+ * -------------------------------------------------- */
+
+p {
+  @apply my-1
+}
+p:first-child {
+  @apply mt-0
+}
 p:last-child {
   @apply mb-0
 }
 
-pre {
-  @apply bg-gray-100 text-tiny w-breakout-small my-4 -mx-3 px-3 py-3
-}
-
-blockquote {
-  @apply text-gray-600 px-4
-}
-
-@media (min-width: 480px) {
-  pre {
-    @apply rounded
-  }
-}
-
-img {
-  @apply max-w-breakout-small my-4 -mx-3
-}
-
-@media (min-width: 480px) {
-  img {
-    @apply rounded-small shadow-lg
-  }
-}
-
-a {
-  @apply border-b border-gray-200 text-gray-600 py-1 transition
-}
-
-a:hover {
-  @apply bg-indigo-100 border-indigo-500 text-indigo-500
-}
-
 ul, ol {
-  @apply pl-4
+  @apply pl-2
 }
 
 ul > li {
@@ -72,8 +72,42 @@ ol > li {
   @apply list-decimal
 }
 
+blockquote {
+  @apply text-gray-600 my-1 px-2
+}
+
+pre {
+  @apply bg-gray-100 text-small w-breakout-1 -mx-1 my-2 px-2 py-1
+}
+@media (min-width: 640px) {
+  pre {
+    @apply w-breakout-2 -mx-2 rounded
+  }
+}
+
+img {
+  @apply max-w-breakout-1 -mx-1 my-2
+}
+@media (min-width: 640px) {
+  img {
+    @apply max-w-breakout-2 -mx-2 rounded
+  }
+}
+
+/* -------------------------------------------------- *
+ * Inline                                             *
+ * -------------------------------------------------- */
+
+a {
+  @apply border-b border-gray-200 text-gray-600 transition
+}
+
+a:hover {
+  @apply bg-indigo-100 border-indigo-500 text-indigo-500
+}
+
 mark {
-  @apply bg-orange-200 px-1
+  @apply bg-orange-200 px-1/4
 }
 
 @tailwind components;

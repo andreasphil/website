@@ -9,14 +9,17 @@
 
     <title>{% if title %}{{ title }} | {% endif %}Andreas' Site</title>
 
-    <link rel="stylesheet" href="/static/styles.css" />
-    <link rel="icon" href="/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&display=swap" rel="stylesheet" />
+    <link href="/static/styles.css" rel="stylesheet" />
+    <link href="/favicon.png" rel="icon" />
   </head>
 
-  <body class="antialiased font-sans text-base text-gray-800 leading-normal">
-    <div class="container min-h-screen mx-auto px-3">
-      {% include 'nav' %}
-      {{ content }}
+  <body class="antialiased font-sans text-base text-gray-800 leading-normal px-1">
+    <div class="container min-h-screen">
+      {% include 'header' %}
+      <main class="my-8">
+        {{ content }}
+      </main>
     </div>
     {% include 'footer' %}
     <script src="/static/index.js" type="module"></script>
