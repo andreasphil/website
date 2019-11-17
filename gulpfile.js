@@ -5,7 +5,7 @@ const { src, dest, watch, series, parallel } = require('gulp'),
 
 // Clean up the destination folder
 function cleanBuild () {
-  return src('site/static', { read: false })
+  return src('site/static', { read: false, allowEmpty: true })
     .pipe(clean())
 }
 
