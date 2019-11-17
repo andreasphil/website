@@ -1,0 +1,8 @@
+<div class="flex flex-col w-breakout-small -mx-3 my-4 leading-tight small:flex-row flex-wrap">
+  {% for link in social %}
+  <a class="text-gray-800 border-none rounded hover:bg-gray-100 w-1/3 flex-shrink-0 mb-3 px-3 py-2" href="{{ link.url }}">
+    <span class="block font-emphasized">{{ link.description }}</span>
+    <span class="block text-small text-gray-600">{{ link.title }}</span>
+  </a>
+  {% endfor %}
+</div>
