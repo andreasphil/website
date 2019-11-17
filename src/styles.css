@@ -48,7 +48,7 @@ img {
 
 @media (min-width: 480px) {
   img {
-    @apply rounded-small
+    @apply rounded-small shadow-lg
   }
 }
 

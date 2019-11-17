@@ -1,9 +1,8 @@
-<footer class="bg-gray-100 text-small">
-  <div class="container mx-auto px-3 py-4">
-    {% for link in social %}
-    <a href="{{ link.url }}" title="{{ link.title }}" target="_blank" rel="noreferrer" class="mr-3">
-      {{- link.title -}}
-    </a>
-    {% endfor %}
+<footer class="text-tiny">
+  <div class="container border-t border-gray-200 mx-auto px-3 py-4">
+    <div class="text-center">
+      <a href="/imprint" class="mr-3">Imprint</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
   </div>
 </footer>

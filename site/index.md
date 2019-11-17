@@ -4,18 +4,11 @@ layout: default
 
 # Hi, I'm Andreas 👋
 
-<p class="text-large">
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-  sit amet.
-</p>
+— a UX engineer building interfaces for the web at [Ergosign][1], and graduate of [Human Computer Interaction][2] and [Applied Computer Science][3].
 
-![this is me!](static/portrait.jpg)
+{% include 'elsewhere' %}
 
-## Posts
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-
-{% include 'post-list' %}
+[1]: https://ergosign.de/en
+[2]: https://www.umu.se/en/education/master/masters-programme-in-human-computer-interaction-and-social-media/
+[3]: https://www.htwsaar.de/htw/studium/studienangebot/bachelor/PI_BSC
