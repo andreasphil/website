@@ -1,4 +1,5 @@
 _site
+site/static
 .cache
 dist
 node_modules
