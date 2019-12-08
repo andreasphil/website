@@ -35,15 +35,13 @@ module.exports = {
       'max': '1024px'
     },
     screens: {
-      small: '640px',
-      normal: '960px'
+      normal: '640px'
     },
     container: {
       center: true
     },
     fontFamily: {
       sans: [
-        'IBM Plex Sans',
         'Inter',
         '-apple-system',
         '"Helvetica Neue"',
@@ -71,6 +69,9 @@ module.exports = {
       default: '.2rem',
       none: '0',
       full: '9999rem'
+    },
+    borderWidth: {
+      default: '1px'
     }
   },
 

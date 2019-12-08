@@ -1,12 +1,11 @@
-<header class="border-b border-smoke py-1-1/2 w-full whitespace-no-wrap overflow-auto">
-  <a href="/"
-    title="Home"
-    class="font-emphasized text-black hover:bg-transparent border-none small:inline">
+<header class="my-2">
+  <a href="/" title="Home" class="font-emphasized border-none text-black">
+    <!-- TODO: Should come from settings -->
     Andreas Philippi
   </a>
 
   {% if title %}
   <span class="text-steel mx-1/2">/</span>
-  <a href="{{ url }}">{{ title }}</a>
+  <a href="{{ page.url }}">{{ title }}</a>
   {% endif %}
 </header>

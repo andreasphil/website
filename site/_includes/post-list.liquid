@@ -1,7 +1,7 @@
 <ol class="p-0">
   {% for post in collections.posts %}
   <li class="list-none">
-    <a class="block py-1 leading-tight hover:bg-transparent hover:border-smoke" href="{{ post.url }}">
+    <a href="{{ post.url }}" class="block py-3/4 hover:border-smoke">
       {{- post.data.title -}}
     </a>
   </li>

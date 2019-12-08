@@ -5,45 +5,33 @@
  * -------------------------------------------------- */
 
 .content {
-  @apply mx-auto mb-8
-}
-@media (min-width: 960px) {
-  .content {
-    @apply w-2/3
-  }
+  @apply mx-auto mb-8;
 }
 
 /* -------------------------------------------------- *
  * Headlines                                          *
  * -------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
-  @apply leading-tight font-emphasized
+.ui-headline {
+  @apply font-emphasized text-indigo uppercase text-small mb-1 block;
 }
 
+h1, h2, h3 {
+  @apply leading-tight font-emphasized;
+}
 h1 {
-  @apply text-h1 mt-8 mb-1-1/2
+  @apply text-h1 mt-8 mb-2;
 }
-
 h2 {
-  @apply text-h2 mt-4 mb-1
+  @apply text-h2 mt-4 mb-1;
 }
-
 h3 {
-  @apply text-large mt-2 mb-1
+  @apply text-large mt-2 mb-1;
 }
-
-h4, h5, h6 {
-  @apply text-large mt-1 mb-1
-}
-
 h1:first-child,
 h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  @apply mt-0
+h3:first-child {
+  @apply mt-0;
 }
 
 /* -------------------------------------------------- *
@@ -51,46 +39,44 @@ h6:first-child {
  * -------------------------------------------------- */
 
 p {
-  @apply my-1
+  @apply my-1;
 }
 p:first-child {
-  @apply mt-0
+  @apply mt-0;
 }
 p:last-child {
-  @apply mb-0
+  @apply mb-0;
 }
 
 ul, ol {
-  @apply pl-2
+  @apply pl-2;
 }
-
 ul > li {
-  @apply list-disc
+  @apply list-disc;
 }
-
 ol > li {
-  @apply list-decimal
+  @apply list-decimal;
 }
 
 blockquote {
-  @apply text-steel my-1 px-2
+  @apply text-steel my-1 px-2;
 }
 
 pre {
-  @apply bg-cloud text-small w-breakout-1 -mx-1 my-2 px-2 py-1
+  @apply bg-cloud text-small w-breakout-1 -mx-1 my-2 px-2 py-1;
 }
 @media (min-width: 640px) {
   pre {
-    @apply w-breakout-2 -mx-2 rounded
+    @apply w-breakout-2 -mx-2 rounded;
   }
 }
 
 img {
-  @apply max-w-breakout-1 -mx-1 my-2
+  @apply max-w-breakout-1 -mx-1 my-2;
 }
 @media (min-width: 640px) {
   img {
-    @apply max-w-breakout-2 -mx-2 rounded
+    @apply max-w-breakout-2 -mx-2 rounded;
   }
 }
 
@@ -99,15 +85,14 @@ img {
  * -------------------------------------------------- */
 
 a {
-  @apply border-b border-smoke text-steel transition
+  @apply border-b border-smoke text-steel transition;
 }
-
 a:hover {
-  @apply border-indigo text-indigo
+  @apply border-black text-black;
 }
 
 mark {
-  @apply bg-orange px-1/4
+  @apply bg-orange px-1/4;
 }
 
 @tailwind components;
