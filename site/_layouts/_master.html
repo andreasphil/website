@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- TODO: Insert these from settings -->
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- TODO: Title should come from settings -->
     <title>{% if title %}{{ title }} | {% endif %}Andreas' Site</title>
 
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&display=swap" rel="stylesheet" />
     <link href="/static/styles.css" rel="stylesheet" />
     <link href="/favicon.png" rel="icon" />
   </head>
 
-  <body class="antialiased font-sans text-base text-black leading-normal px-1">
-    <div class="container min-h-screen">
-      {% include 'header' %}
+  <body class="antialiased font-sans text-black leading-normal px-1">
+    <div class="container">
+      {% unless page.url == '/' %} {% include 'header' %} {% endunless %}
       <main class="my-8">
         {{ content }}
       </main>
