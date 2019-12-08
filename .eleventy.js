@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Copy static assets
+  eleventyConfig.setUseGitIgnore(false)
   eleventyConfig.addPassthroughCopy('site/static')
   eleventyConfig.addPassthroughCopy('site/favicon.png')
 
