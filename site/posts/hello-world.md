@@ -1,6 +1,6 @@
 ---
 tags: posts
-title: "First: Hello World"
+title: 'First: Hello World'
 excerpt: We all need to start somewhere.
 ---
 
