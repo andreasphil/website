@@ -4,7 +4,7 @@
  * Layout                                             *
  * -------------------------------------------------- */
 
-.content {
+.section {
   @apply mx-auto mb-8;
 }
 
@@ -76,7 +76,7 @@ img {
 }
 @media (min-width: 640px) {
   img {
-    @apply max-w-breakout-2 -mx-2 rounded;
+    @apply max-w-breakout-2 -mx-2;
   }
 }
 

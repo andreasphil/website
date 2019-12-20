@@ -2,17 +2,24 @@
 layout: _master
 ---
 
-<div class="content">
+<section class="section">
   <h1 class="ui-headline">Hey there!</h1>
   <p class="text-large">
-    I'm <span class="font-emphasized">Andreas Philippi</span>, a UX engineer building interfaces for
+    I'm Andreas, a UX engineer building interfaces for
     the web at <a href="#">Ergosign</a>, and graduate of
     <a href="#">Human Computer Interaction</a> and <a href="#">Applied Computer Science</a>.
   </p>
-</div>
+</section>
 
-<div class="content">
+<section class="section">
+  <h2 class="ui-headline">Thoughts</h2>
+    {% include 'post-list' %}
+  </h2>
+</section>
+
+<section class="section">
   <h2 class="ui-headline">Elsewhere</h2>
+  <p>Follow me around the web to see what I've been up to:</p>
   {% include 'elsewhere' %}
-</div>
+</section>
 

@@ -3,11 +3,12 @@ module.exports = {
     extend: {
       width: {
         'breakout-1': 'calc(100% + 2rem)',
-        'breakout-2': 'calc(100% + 4rem)',
+        'breakout-2': 'calc(100% + 4rem)'
       },
       maxWidth: {
         'breakout-1': 'calc(100% + 2rem)',
         'breakout-2': 'calc(100% + 4rem)',
+        'layout-max': '1440px'
       }
     },
 
@@ -31,8 +32,7 @@ module.exports = {
       '2': '2rem',
       '4': '4rem',
       '6': '6rem',
-      '8': '8rem',
-      'max': '1024px'
+      '8': '8rem'
     },
     screens: {
       normal: '640px'
