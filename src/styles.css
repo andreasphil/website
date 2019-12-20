@@ -16,7 +16,9 @@
   @apply font-emphasized text-indigo uppercase text-small mb-1;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   @apply leading-tight font-emphasized;
 }
 h1 {
@@ -48,7 +50,8 @@ p:last-child {
   @apply mb-0;
 }
 
-ul, ol {
+ul,
+ol {
   @apply pl-2;
 }
 ul > li {

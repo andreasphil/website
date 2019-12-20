@@ -1,6 +1,6 @@
 ---
 tags: posts
-title: "Third Post about stuff I find important with a long title"
+title: 'Third Post about stuff I find important with a long title'
 ---
 
 Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, [li grammatica del resultant lingue](https://link) es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental.
