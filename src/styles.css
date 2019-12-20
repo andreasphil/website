@@ -13,7 +13,7 @@
  * -------------------------------------------------- */
 
 .ui-headline {
-  @apply font-emphasized text-indigo uppercase text-small mb-1 block;
+  @apply font-emphasized text-indigo uppercase text-small mb-1;
 }
 
 h1, h2, h3 {
@@ -59,7 +59,7 @@ ol > li {
 }
 
 blockquote {
-  @apply text-steel my-1 px-2;
+  @apply text-steel my-2 px-1 border-l-bold border-indigo;
 }
 
 pre {
