@@ -15,11 +15,11 @@ module.exports = {
     colors: {
       white: '#ffffff',
       black: '#393e46',
-      steel: '#929aab',
-      smoke: '#eeeeee',
-      cloud: '#f7f7f7',
+      steel: '#727c8d',
+      smoke: '#eeeff1',
+      cloud: '#f9fafa',
       indigo: '#7971ea',
-      orange: '#eac371'
+      orange: '#ffdd99'
     },
     spacing: {
       px: '1px',
@@ -54,7 +54,7 @@ module.exports = {
       base: '1rem',
       large: '1.125rem',
       h1: '2rem',
-      h2: '1.5rem',
+      h2: '1.5rem'
     },
     fontWeight: {
       normal: '400',
@@ -71,7 +71,8 @@ module.exports = {
       full: '9999rem'
     },
     borderWidth: {
-      default: '1px'
+      default: '1px',
+      bold: '0.125rem'
     }
   },
 
@@ -82,4 +83,4 @@ module.exports = {
       standard: 'all .2s'
     })
   ]
-}
+};
