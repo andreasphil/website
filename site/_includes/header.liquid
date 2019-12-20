@@ -1,4 +1,4 @@
-<header class="my-2">
+<header class="my-2 truncate">
   <a href="/" title="Home" class="font-emphasized border-none text-black">
     <!-- TODO: Should come from settings -->
     Andreas Philippi
@@ -6,6 +6,6 @@
 
   {% if title %}
   <span class="text-steel mx-1/2">/</span>
-  <a href="{{ page.url }}">{{ title }}</a>
+  <a class="text-steel" href="{{ page.url }}">{{- title -}}</a>
   {% endif %}
 </header>

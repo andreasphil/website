@@ -2,10 +2,8 @@
 layout: _master
 ---
 
-<div class="content">
-  {% if title %}
-  <h1 class="text-h2 my-1">{{ title }}</h1>
-  {% endif %}
+{% if title %}
+<h1>{{- title -}}</h1>
+{% endif %}
 
-  {{ content }}
-</div>
+{{ content }}

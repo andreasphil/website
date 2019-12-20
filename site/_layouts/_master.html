@@ -15,13 +15,14 @@
     <link href="/favicon.png" rel="icon" />
   </head>
 
-  <body class="antialiased font-sans text-black leading-normal px-1">
-    <div class="container">
-      {% unless page.url == '/' %} {% include 'header' %} {% endunless %}
-      <main class="my-8">
+  <body class="antialiased font-sans text-base text-black leading-normal">
+    <div class="px-1 normal:px-2 max-w-layout-max m-auto">
+      {% include 'header' %}
+      <main class="container my-8">
         {{ content }}
       </main>
     </div>
+    {% include 'footer' %}
     <script src="/static/index.js" type="module"></script>
   </body>
 </html>
