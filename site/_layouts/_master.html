@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ meta.language }}">
   <head>
     <meta charset="utf-8" />
-    <!-- TODO: Insert these from settings -->
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="author" content="{{ meta.author }}" />
+    <meta name="description" content="{{ meta.description }}" />
+    <meta name="keywords" content="{{ meta.keywords }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- TODO: Title should come from settings -->
-    <title>{% if title %}{{ title }} | {% endif %}Andreas' Site</title>
-
+    <title>{% if title %}{{ title }} / {% endif %}{{ meta.siteName }}</title>
     <link href="/static/styles.css" rel="stylesheet" />
     <link href="/favicon.png" rel="icon" />
   </head>
