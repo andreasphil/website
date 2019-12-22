@@ -98,5 +98,9 @@ mark {
   @apply bg-orange px-1/4;
 }
 
+strong {
+  @apply font-emphasized;
+}
+
 @tailwind components;
 @tailwind utilities;
