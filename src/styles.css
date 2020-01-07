@@ -1,3 +1,17 @@
+/* -------------------------------------------------- *
+ * Variables                                          *
+ * -------------------------------------------------- */
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #393e46;
+  --color-steel: #727c8d;
+  --color-smoke: #eeeff1;
+  --color-cloud: #f9fafa;
+  --color-indigo: #7971ea;
+  --color-orange: #ffdd99;
+}
+
 @tailwind base;
 
 /* -------------------------------------------------- *
@@ -13,7 +27,7 @@
  * -------------------------------------------------- */
 
 .ui-headline {
-  @apply font-emphasized text-indigo uppercase text-small mb-1;
+  @apply font-emphasized text-indigo uppercase text-small mb-1 mt-6;
 }
 
 h1,
@@ -62,7 +76,7 @@ ol > li {
 }
 
 blockquote {
-  @apply text-steel my-2 px-1 border-l-bold border-indigo;
+  @apply my-2 px-1 border-l-bold border-indigo;
 }
 
 pre {
@@ -89,6 +103,7 @@ img {
 
 a {
   @apply border-b border-smoke text-steel transition;
+  padding-bottom: .1rem;
 }
 a:hover {
   @apply border-black text-black;

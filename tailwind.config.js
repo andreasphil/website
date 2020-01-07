@@ -13,13 +13,13 @@ module.exports = {
     },
 
     colors: {
-      white: '#ffffff',
-      black: '#393e46',
-      steel: '#727c8d',
-      smoke: '#eeeff1',
-      cloud: '#f9fafa',
-      indigo: '#7971ea',
-      orange: '#ffdd99'
+      white: 'var(--color-white)',
+      black: 'var(--color-black)',
+      steel: 'var(--color-steel)',
+      smoke: 'var(--color-smoke)',
+      cloud: 'var(--color-cloud)',
+      indigo: 'var(--color-indigo)',
+      orange: 'var(--color-orange)'
     },
     spacing: {
       px: '1px',
