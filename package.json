@@ -4,7 +4,7 @@
   "description": "My website, built with 11ty",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve --watch",
+    "start": "eleventy --serve",
     "start:src": "gulp",
     "build": "npm run build:src && npm run build:site",
     "build:site": "eleventy",
