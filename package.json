@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "start:src": "gulp",
+    "start:src": "parcel watch -d site/static src/index.js src/styles.css",
     "build": "npm run build:src && npm run build:site",
     "build:site": "eleventy",
-    "build:src": "gulp build",
+    "build:src": "parcel build -d site/static src/index.js src/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,10 +24,7 @@
   "homepage": "https://github.com/andrsphil/website#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "tailwindcss": "^1.0.1",
     "tailwindcss-transition": "^1.0.5"
