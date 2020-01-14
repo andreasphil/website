@@ -8,7 +8,7 @@ module.exports = {
       maxWidth: {
         'breakout-1': 'calc(100% + 2rem)',
         'breakout-2': 'calc(100% + 4rem)',
-        'layout-max': '1440px'
+        'layout-max': '1680px'
       }
     },
 
@@ -35,7 +35,7 @@ module.exports = {
       '8': '8rem'
     },
     screens: {
-      normal: '640px'
+      normal: '680px'
     },
     container: {
       center: true
