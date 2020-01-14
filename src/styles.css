@@ -35,7 +35,7 @@
 h1,
 h2,
 h3 {
-  @apply leading-tight font-emphasized;
+  @apply leading-tight font-heavy;
 }
 h1 {
   @apply text-h1 mt-8 mb-2;
