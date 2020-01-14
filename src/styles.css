@@ -10,6 +10,8 @@
   --color-cloud: #f9fafa;
   --color-indigo: #7971ea;
   --color-orange: #ffdd99;
+
+  font-size: 18px;
 }
 
 @tailwind base;
@@ -82,7 +84,7 @@ blockquote {
 pre {
   @apply bg-cloud text-small w-breakout-1 -mx-1 my-2 px-2 py-1;
 }
-@media (min-width: 640px) {
+@media (min-width: 680px) {
   pre {
     @apply w-breakout-2 -mx-2 rounded;
   }
@@ -91,7 +93,7 @@ pre {
 img {
   @apply max-w-breakout-1 -mx-1 my-2;
 }
-@media (min-width: 640px) {
+@media (min-width: 680px) {
   img {
     @apply max-w-breakout-2 -mx-2;
   }
