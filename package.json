@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "start:src": "parcel watch -d site/static src/index.js src/styles.css",
+    "start:src": "parcel watch -d site/static 'src/*.(js|css)'",
     "build": "npm run build:src && npm run build:site",
     "build:site": "eleventy",
-    "build:src": "parcel build -d site/static src/index.js src/styles.css",
+    "build:src": "parcel build -d site/static 'src/*.(js|css)'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,8 +26,10 @@
     "@11ty/eleventy": "^0.8.3",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "tailwindcss": "^1.0.1",
+    "tailwindcss": "^1.1.4",
     "tailwindcss-transition": "^1.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  }
 }
