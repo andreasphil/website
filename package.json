@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "start:src": "parcel watch -d site/static 'src/*.(js|css)'",
+    "start:src": "parcel watch --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
     "build": "npm run build:src && npm run build:site",
     "build:site": "eleventy",
-    "build:src": "parcel build -d site/static 'src/*.(js|css)'",
+    "build:src": "parcel build --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
