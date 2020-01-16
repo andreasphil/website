@@ -3,15 +3,33 @@
  * -------------------------------------------------- */
 
 :root {
-  --color-white: #ffffff;
-  --color-black: #393e46;
-  --color-steel: #727c8d;
-  --color-smoke: #eeeff1;
-  --color-cloud: #f9fafa;
-  --color-indigo: #7971ea;
-  --color-orange: #ffdd99;
+  /* Grayscale */
+  --color-black: rgb(50, 50, 60);
+  --color-white: rgb(255, 255, 255);
+  --color-gray-30: rgb(120, 120, 130);
+  --color-gray-20: rgba(0, 0, 10, 0.06);
+  --color-gray-10: rgba(0, 10, 10, 0.02);
 
-  font-size: 18px;
+  /* Colors */
+  --color-indigo: rgb(121, 113, 234);
+
+  /* Sizing */
+  --rem-base: 16px;
+}
+@media (min-width: 680px) {
+  :root {
+    --rem-base: 18px;
+  }
+}
+@media(prefers-color-scheme: dark) {
+  :root {
+    /* Inverted grayscale */
+    --color-black: rgb(255, 255, 255);
+    --color-white: rgb(10, 10, 15);
+    --color-gray-30: rgb(140, 140, 150);
+    --color-gray-20: rgba(230, 230, 250, 0.075);
+    --color-gray-10: rgba(0, 0, 5, 0.75);
+  }
 }
 
 @tailwind base;
@@ -19,6 +37,10 @@
 /* -------------------------------------------------- *
  * Layout                                             *
  * -------------------------------------------------- */
+
+html {
+  font-size: var(--rem-base);
+}
 
 .section {
   @apply mx-auto mb-8;
@@ -82,7 +104,7 @@ blockquote {
 }
 
 pre {
-  @apply bg-cloud text-small w-breakout-1 -mx-1 my-2 px-2 py-1;
+  @apply bg-gray-10 text-small w-breakout-1 -mx-1 my-2 px-2 py-1;
 }
 @media (min-width: 680px) {
   pre {
@@ -104,15 +126,11 @@ img {
  * -------------------------------------------------- */
 
 a {
-  @apply border-b border-smoke text-steel transition;
-  padding-bottom: .1rem;
+  @apply border-b border-gray-20 text-gray-30 transition;
+  padding-bottom: 0.1rem;
 }
 a:hover {
   @apply border-black text-black;
-}
-
-mark {
-  @apply bg-orange px-1/4;
 }
 
 strong {
