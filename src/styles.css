@@ -119,5 +119,14 @@ strong {
   @apply font-emphasized;
 }
 
+/* -------------------------------------------------- *
+ * Components                                         *
+ * -------------------------------------------------- */
+
+.turbolinks-progress-bar {
+  @apply bg-indigo;
+  height: 2px;
+}
+
 @tailwind components;
 @tailwind utilities;

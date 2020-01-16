@@ -6,9 +6,18 @@
     <meta name="description" content="{{ meta.description }}" />
     <meta name="keywords" content="{{ meta.keywords }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ meta.siteName }}{% if title %} &middot; {{ title }}{% endif %}</title>
-    <link href="/static/styles.css" rel="stylesheet" />
     <link href="/favicon.png" rel="icon" />
+    <title>
+      {{ meta.siteName }}{% if title %} &middot; {{ title }}{% endif %}
+    </title>
+
+    <script src="/static/index.js" data-turbolinks-track="reload"></script>
+
+    <link
+      href="/static/styles.css"
+      rel="stylesheet"
+      data-turbolinks-track="reload"
+    />
   </head>
 
   <body class="antialiased font-sans text-base text-black leading-normal">
@@ -19,6 +28,5 @@
       </main>
     </div>
     {% include 'footer' %}
-    <script src="/static/index.js" type="module"></script>
   </body>
 </html>
