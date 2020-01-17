@@ -1,7 +1,9 @@
 {
   "author": "Andreas Philippi",
-  "keywords": "",
+  "authorEmail": "andreas@example.com",
   "description": "",
-  "siteName": "Andreas' Site",
-  "language": "en"
+  "keywords": "",
+  "language": "en",
+  "repository": "https://github.com/andrsphil/website",
+  "siteName": "Andreas' Site"
 }
