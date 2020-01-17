@@ -6,12 +6,12 @@
   /* Grayscale */
   --color-black: rgb(50, 50, 60);
   --color-white: rgb(255, 255, 255);
-  --color-gray-30: rgb(120, 120, 130);
-  --color-gray-20: rgba(0, 0, 10, 0.06);
+  --color-gray-30: rgb(117, 117, 127);
+  --color-gray-20: rgba(0, 0, 10, 0.09);
   --color-gray-10: rgba(0, 10, 10, 0.02);
 
   /* Colors */
-  --color-indigo: rgb(121, 113, 234);
+  --color-indigo: rgb(140, 100, 250);
 
   /* Sizing */
   --rem-base: 16px;
@@ -25,10 +25,10 @@
   :root {
     /* Inverted grayscale */
     --color-black: rgb(255, 255, 255);
-    --color-white: rgb(10, 10, 15);
+    --color-white: rgb(20, 20, 23);
     --color-gray-30: rgb(140, 140, 150);
-    --color-gray-20: rgba(230, 230, 250, 0.075);
-    --color-gray-10: rgba(0, 0, 5, 0.75);
+    --color-gray-20: rgba(230, 230, 250, 0.09);
+    --color-gray-10: rgba(0, 0, 5, 0.3);
   }
 }
 
@@ -117,7 +117,7 @@ img {
 }
 @media (min-width: 680px) {
   img {
-    @apply max-w-breakout-2 -mx-2;
+    @apply max-w-breakout-2 -mx-2 rounded;
   }
 }
 
