@@ -11,7 +11,7 @@
   --color-gray-10: rgba(0, 10, 10, 0.02);
 
   /* Colors */
-  --color-indigo: rgb(140, 100, 250);
+  --color-indigo: rgb(130, 100, 250);
 
   /* Sizing */
   --rem-base: 16px;
@@ -100,7 +100,7 @@ ol > li {
 }
 
 blockquote {
-  @apply my-2 px-1 border-l-bold border-indigo;
+  @apply my-2 px-1 border-l border-indigo;
 }
 
 pre {
@@ -130,7 +130,7 @@ a {
   padding-bottom: 0.1rem;
 }
 a:hover {
-  @apply border-black text-black;
+  @apply border-indigo text-black;
 }
 
 strong {
