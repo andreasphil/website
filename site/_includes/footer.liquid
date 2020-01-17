@@ -4,9 +4,9 @@
       &copy; {{ 'now' | date: '%Y' }} {{ meta.author }}
     </span>
     <div>
-      <a class="text-black mr-1/2" href="mailto:{{ meta.authorEmail }}">Contact</a>
+      <a class="text-black mr-1/2" href="mailto:{{- meta.authorEmail -}}">Contact</a>
       <a class="text-black mr-1/2" href="/legal">Legal notice & privacy</a>
-      <a class="text-black mr-1/2" href="{{ meta.repository }}">View source</a>
+      <a class="text-black" href="{{- meta.repository -}}">View source</a>
     </div>
   </div>
 </footer>
