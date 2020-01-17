@@ -24,8 +24,7 @@ module.exports = function(eleventyConfig) {
 
   // Paths
   const dir = {
-    input: 'site',
-    layouts: '_layouts'
+    input: 'site'
   };
 
   return {
