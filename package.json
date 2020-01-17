@@ -6,6 +6,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "start:src": "parcel watch --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
+    "debug": "DEBUG=Eleventy* eleventy --serve",
     "build": "npm run build:src && npm run build:site",
     "build:site": "eleventy",
     "build:src": "parcel build --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
