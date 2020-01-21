@@ -18,7 +18,8 @@ module.exports = {
       'gray-30': 'var(--color-gray-30)',
       'gray-20': 'var(--color-gray-20)',
       'gray-10': 'var(--color-gray-10)',
-      indigo: 'var(--color-indigo)'
+      indigo: 'var(--color-indigo)',
+      transparent: 'transparent'
     },
     spacing: {
       px: '1px',

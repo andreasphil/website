@@ -1,10 +1,12 @@
-<ul class="p-0">
-  {% for link in elsewhere %}
-  <li class="list-none">
-    <a href="{{- link.url -}}" class="block py-3/4">
-      <span class="text-black font-emphasized mr-1/4">{{ link.title }}</span>
-      {{ link.description }}
+<ul class="p-0 -mx-1">
+  {%- for link in elsewhere -%}
+  <li class="list-none inline-block">
+    <a
+      href="{{- link.url -}}"
+      class="px-1 py-1/2 rounded border border-transparent hover:border-indigo"
+    >
+      <span class="">{{- link.title -}}</span>
     </a>
   </li>
-  {% endfor %}
+  {%- endfor -%}
 </ul>
