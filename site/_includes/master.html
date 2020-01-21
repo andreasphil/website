@@ -21,14 +21,23 @@
   </head>
 
   <body
-    class="antialiased font-sans text-base text-black leading-normal bg-white"
+    class="antialiased
+      font-sans
+      text-base
+      text-black
+      leading-normal
+      bg-white
+      min-h-screen
+      flex
+      flex-col
+      justify-between"
   >
-    <div class="px-1 normal:px-2 max-w-layout-max m-auto">
-      {% include 'header' %}
+    <div class="px-1 normal:px-2 max-w-layout-max mx-auto w-full">
+      <!-- {% include 'header' %} -->
       <main class="container my-8">
         {{ content }}
       </main>
     </div>
-    {% include 'footer' %}
+    <!-- {% include 'footer' %} -->
   </body>
 </html>
