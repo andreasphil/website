@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrsphil/website.git"
+    "url": "git+https://github.com/andreasphil/website.git"
   },
   "author": "Andreas Philippi",
   "license": "UNLICENSED",
   "private": true,
   "bugs": {
-    "url": "https://github.com/andrsphil/website/issues"
+    "url": "https://github.com/andreasphil/website/issues"
   },
-  "homepage": "https://github.com/andrsphil/website#readme",
+  "homepage": "https://github.com/andreasphil/website#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "parcel-bundler": "^1.12.4",
