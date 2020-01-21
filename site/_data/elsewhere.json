@@ -1,27 +1,22 @@
 [
   {
     "title": "Github",
-    "url": "https://github.com/andreasphil",
-    "description": "Code"
+    "url": "https://github.com/andreasphil"
   },
   {
     "title": "Dribbble",
-    "url": "https://dribbble.com/andreasphil",
-    "description": "Pixels"
+    "url": "https://dribbble.com/andreasphil"
   },
   {
     "title": "Instagram",
-    "url": "https://instagram.com/andrsphil",
-    "description": "Photography"
+    "url": "https://instagram.com/andrsphil"
   },
   {
     "title": "Linked In",
-    "url": "https://linkedin.com/in/andreas-philippi",
-    "description": "Experience"
+    "url": "https://linkedin.com/in/andreas-philippi"
   },
   {
     "title": "Email",
-    "url": "#",
-    "description": "Say hello"
+    "url": "mailto:andreasphil@icloud.com"
   }
 ]
