@@ -2,18 +2,12 @@
 layout: default
 ---
 
-<h1 class="ui-headline">Hey there!</h1>
+<p class="text-h2">
+  Hi! I'm <strong>Andreas</strong>, a UX engineer from Saarbrücken. My background is in <a href="https://www.umu.se/en/education/master/masters-programme-in-human-computer-interaction-and-social-media/">human-computer interaction</a> and <a href="https://www.htwsaar.de/studium/studienangebot/bachelor/PI_BSC">computer science</a>. These days I build user interfaces for the web at <a href="https://ergosign.de">Ergosign</a>.
+</p>
 
-I'm **Andreas Philippi**, a UX engineer building interfaces for the web at [Ergosign](https://ergosign.de/en), and graduate of [Human Computer Interaction](#) and [Applied Computer Science](#). Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-
-<h2 class="ui-headline">Posts</h2>
-
-Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-
-{% include 'post-list' %}
-
-<h2 class="ui-headline">Elsewhere</h2>
-
-Follow me around the web to see what else I've been up to:
+<p class="text-h2 mb-2">
+  Drop me an <a href="mailto:{{ meta.authorEmail }}">email</a>, or follow me around the web to see what I've been up to.
+</p>
 
 {% include 'elsewhere' %}
