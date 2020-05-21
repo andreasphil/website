@@ -10,6 +10,6 @@ I'm Andreas, a UX engineer from Saarbrücken. My background is in <a href="https
   {% include 'elsewhere' %}
 </div>
 
-<h2 class="ui-headline">Recommended posts</h2>
+<h2 class="ui-headline">Posts</h2>
 
 {% include 'post-list' %}
