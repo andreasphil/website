@@ -112,7 +112,7 @@ blockquote {
 }
 
 pre {
-  @apply bg-gray-10 text-small w-breakout-1 -mx-1 my-2 px-2 py-1;
+  @apply bg-gray-10 text-small w-breakout -mx-1 my-2 px-2 py-1;
 }
 @media (min-width: 680px) {
   pre {
@@ -121,7 +121,7 @@ pre {
 }
 
 img {
-  @apply max-w-breakout-1 -mx-1 my-2;
+  @apply max-w-breakout -mx-1 my-2;
 }
 @media (min-width: 680px) {
   img {
@@ -134,7 +134,7 @@ img {
  * -------------------------------------------------- */
 
 a {
-  @apply border-b-hair border-gray-20 text-gray-30 transition;
+  @apply border-b-hair border-gray-20 text-gray-30 transition-all duration-150;
   padding-bottom: 0.1rem;
 }
 

@@ -2,16 +2,13 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'breakout-1': 'calc(100% + 2rem)',
-        'breakout-2': 'calc(100% + 4rem)'
+        'breakout': 'calc(100% + 2rem)',
       },
       maxWidth: {
-        'breakout-1': 'calc(100% + 2rem)',
-        'breakout-2': 'calc(100% + 4rem)',
+        'breakout': 'calc(100% + 2rem)',
         'layout-max': '1680px'
       }
     },
-
     colors: {
       white: 'var(--color-white)',
       black: 'var(--color-black)',
@@ -76,12 +73,13 @@ module.exports = {
       hair: '1px'
     }
   },
-
   variants: {},
-
-  plugins: [
-    require('tailwindcss-transition')({
-      standard: 'all .2s'
-    })
+  plugins: [],
+  purge: [
+    './site/**/*.html',
+    './site/**/*.liquid',
+    './site/**/*.md',
+    './src/**/*.css',
+    './src/**/*.js',
   ]
 };

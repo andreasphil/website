@@ -24,11 +24,10 @@
   },
   "homepage": "https://github.com/andreasphil/website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy": "^0.11.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "tailwindcss": "^1.1.4",
-    "tailwindcss-transition": "^1.0.5"
+    "tailwindcss": "^1.4.6"
   },
   "dependencies": {
     "turbolinks": "^5.2.0"
