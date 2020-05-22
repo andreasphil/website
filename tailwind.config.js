@@ -27,6 +27,7 @@ module.exports = {
       '1': '1rem',
       '1-1/2': '1.5rem',
       '2': '2rem',
+      '3': '3rem',
       '4': '4rem',
       '6': '6rem',
       '8': '8rem'
@@ -50,7 +51,7 @@ module.exports = {
       small: '.875rem',
       base: '1rem',
       large: '1.125rem',
-      h1: '2rem',
+      h1: '2.5rem',
       h2: '1.5rem'
     },
     fontWeight: {

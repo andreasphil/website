@@ -4,11 +4,20 @@ layout: _master
 
 {% assign featured = collections.post | first %}
 
-<h2 class="ui-headline mb-1/2">Featured Post</h2>
-<h1 class="mt-0">{{ featured.data.title }}</h1>
+<div class="ui-headline mb-2 space-x-1">
+  <span>Featured Post</span>
+  <a href="/posts/" class="hidden normal:inline">Browse all</a>
+  <a href="/about/" class="hidden normal:inline">Who's this?</a>
+</div>
+
+<h1 class="mt-0">
+  <a href="{{ featured.url }}" class="text-black">{{ featured.data.title }}</a>
+</h1>
 
 {% if featured.data.intro %}
 <p class="text-gray-30 text-large mb-2">{{- featured.data.intro -}}</p>
 {% endif %}
 
-<article>{{ featured.templateContent }}</article>
+<article>
+  {{ featured.templateContent }}
+</article>
