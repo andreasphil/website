@@ -1,0 +1,14 @@
+---
+layout: master
+---
+
+{% assign featured = collections.post | first %}
+
+<h2 class="ui-headline mb-1/2">Featured Post</h2>
+<h1 class="mt-0">{{ featured.data.title }}</h1>
+
+{% if featured.data.intro %}
+<p class="text-gray-30 text-large mb-2">{{- featured.data.intro -}}</p>
+{% endif %}
+
+<article>{{ featured.templateContent }}</article>
