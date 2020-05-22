@@ -1,5 +1,13 @@
 <header class="pt-2 mb-2 truncate">
-  <a href="/" title="Home" class="font-emphasized border-white text-black">
-    {{- meta.author -}}
-  </a>
+  <div class="max-w-layout-max mx-auto flex flex-wrap justify-between">
+    <div class="mr-1">
+      <a href="/" title="Home" class="border-white font-emphasized text-black">
+        {{- meta.author -}}
+      </a>
+    </div>
+    <div class="space-x-1 font-emphasized text-small uppercase">
+      <a class="border-white" href="/posts">Posts</a>
+      <a class="border-white" href="/about">About</a>
+    </div>
+  </div>
 </header>
