@@ -3,7 +3,11 @@ layout: _master
 ---
 
 {% if title %}
-<h1>{{- title -}}</h1>
+<div class="ui-headline mb-2">
+  {{ title }}
+</div>
 {% endif %}
 
-{{ content }}
+<article>
+  {{ content }}
+</article>

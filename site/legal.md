@@ -1,5 +1,6 @@
 ---
 layout: _default
+title: Legal & privacy
 ---
 
 ## Legal notice
