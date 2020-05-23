@@ -3,6 +3,6 @@ layout: _default
 title: Blog
 ---
 
-<h1>All posts</h1>
+# All posts
 
 {% include "post-list" %}
