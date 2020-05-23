@@ -2,22 +2,22 @@
 layout: _master
 ---
 
-{% assign featured = collections.post | first %}
+{% assign post = collections.post | last %}
 
 <div class="ui-headline mb-2 space-x-1">
-  <span>Featured Post</span>
+  <span>Latest post</span>
   <a href="/posts/" class="hidden normal:inline">Browse all</a>
   <a href="/about/" class="hidden normal:inline">Who's this?</a>
 </div>
 
 <h1 class="mt-0">
-  <a href="{{ featured.url }}" class="text-black">{{ featured.data.title }}</a>
+  <a href="{{ post.url }}" class="text-black">{{ post.data.title }}</a>
 </h1>
 
-{% if featured.data.intro %}
-<p class="text-gray-30 text-large mb-2">{{- featured.data.intro -}}</p>
+{% if post.data.intro %}
+<p class="text-gray-30 text-large mb-2">{{- post.data.intro -}}</p>
 {% endif %}
 
 <article>
-  {{ featured.templateContent }}
+  {{ post.templateContent }}
 </article>

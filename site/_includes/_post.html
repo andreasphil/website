@@ -2,10 +2,31 @@
 layout: _master
 ---
 
-<h1>{{- title -}}</h1>
+<div class="section">
+  <h1>{{- title -}}</h1>
 
-{% if intro %}
-<p class="text-gray-30 text-large mb-2">{{- intro -}}</p>
+  {% if intro %}
+  <p class="text-gray-30 text-large mb-2">{{- intro -}}</p>
+  {% endif %}
+
+  <article>{{ content }}</article>
+</div>
+
+{% assign older = collections.post | getPreviousCollectionItem: page %}
+{% assign newer = collections.post | getNextCollectionItem: page %}
+
+{% if older or newer %}
+<div class="section flex uppercase font-emphasized text-small">
+  {% if newer %}
+  <div class="flex-1">
+    <a href="{{ newer.url }}">&leftarrow; Newer</a>
+  </div>
+  {% endif %}
+
+  {% if older %}
+  <div class="flex-1 text-right">
+    <a href="{{ older.url }}">Older &rightarrow;</a>
+  </div>
+  {% endif %}
+</div>
 {% endif %}
-
-<article>{{ content }}</article>

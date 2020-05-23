@@ -67,7 +67,7 @@ h3:first-child {
 }
 
 h1 {
-  @apply text-h1 mt-8 mb-2;
+  @apply text-h1 mt-8 mb-2 capitalize;
 }
 
 h2 {
