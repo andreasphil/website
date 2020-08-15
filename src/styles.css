@@ -46,6 +46,10 @@ html {
   @apply mx-auto mb-8;
 }
 
+hr {
+  @apply border-t border-gray-20 my-4;
+}
+
 /* -------------------------------------------------- *
  * Headlines                                          *
  * -------------------------------------------------- */
@@ -108,7 +112,7 @@ ol > li {
 }
 
 blockquote {
-  @apply my-2 px-1 border-l border-indigo;
+  @apply my-2 px-1 border-l border-gray-20 text-indigo;
 }
 
 pre {
