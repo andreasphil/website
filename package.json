@@ -2,15 +2,10 @@
   "name": "website",
   "version": "1.0.0",
   "description": "My website, built with 11ty",
-  "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "start:src": "parcel watch --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
     "debug": "DEBUG=Eleventy* eleventy --serve",
-    "build": "npm run build:src && npm run build:site",
-    "build:site": "eleventy",
-    "build:src": "parcel build --out-dir site/static --public-url /static/ 'src/*.(js|css)'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -24,13 +19,8 @@
   },
   "homepage": "https://github.com/andreasphil/website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^1.19.1",
-    "tailwindcss": "^1.1.4",
-    "tailwindcss-transition": "^1.0.5"
+    "@11ty/eleventy": "^0.11.0",
+    "prettier": "^2.0.5"
   },
-  "dependencies": {
-    "turbolinks": "^5.2.0"
-  }
+  "dependencies": {}
 }

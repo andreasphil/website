@@ -1,0 +1,15 @@
+---
+layout: _base
+---
+
+{% include 'header' %}
+
+<article class="content">
+  {% if title %}
+  <h1>{{- title -}}</h1>
+  {% endif %}
+
+  {{ content }}
+</article>
+
+{% include 'footer' %}

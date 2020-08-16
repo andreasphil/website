@@ -1,33 +1,25 @@
-module.exports = function(eleventyConfig) {
+module.exports = eleventyConfig => {
   // Make browsersync play nice with turbolinks
   eleventyConfig.setBrowserSyncConfig({
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: function(snippet, match) {
-          return snippet + match;
-        }
+        fn: (snippet, match) => snippet + match
       }
     }
-  });
+  })
 
   // Copy static assets
-  eleventyConfig.setUseGitIgnore(false);
-  eleventyConfig.addPassthroughCopy('site/static');
-  eleventyConfig.addPassthroughCopy('site/favicon.png');
+  eleventyConfig.addPassthroughCopy("site/static")
 
   // Template configuration
-  eleventyConfig.setTemplateFormats(['html', 'md']);
-  eleventyConfig.setLiquidOptions({
-    dynamicPartials: true
-  });
+  eleventyConfig.setTemplateFormats(["html", "md"])
+  eleventyConfig.setLiquidOptions({ dynamicPartials: true })
 
   // Paths
-  const dir = {
-    input: 'site'
-  };
+  const dir = { input: "site", output: "build" }
 
   return {
     dir
-  };
-};
+  }
+}

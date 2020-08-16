@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{- meta.language -}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="{{- meta.author -}}" />
+    <meta name="description" content="{{- meta.description -}}" />
+    <meta name="keywords" content="{{- meta.keywords -}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/favicon.png" rel="icon" />
+    <title>
+      {% if title %}{{ title }} &middot; {% endif %}{{ meta.siteName }}
+    </title>
+
+    <script type="module" src="/static/index.js"></script>
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main class="container">
+      {{ content }}
+    </main>
+  </body>
+</html>

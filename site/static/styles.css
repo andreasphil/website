@@ -1,0 +1,14 @@
+@import "assets/normalize.css";
+
+body {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 40rem;
+  margin: auto;
+}
+
+.content {
+  margin: 3rem 0;
+}

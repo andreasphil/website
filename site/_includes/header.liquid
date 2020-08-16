@@ -1,10 +1,7 @@
-<header class="pt-2 mb-2 truncate">
-  <a href="/" title="Home" class="font-emphasized border-white text-black">
-    {{- meta.author -}}
-  </a>
-
-  {% if title %}
-  <span class="text-gray-30 mx-1/4">&middot;</span>
-  <a class="text-gray-30" href="{{- page.url -}}">{{- title -}}</a>
-  {% endif %}
+<header>
+  <nav>
+    <a href="/" title="Home">
+      {{- meta.author -}}
+    </a>
+  </nav>
 </header>

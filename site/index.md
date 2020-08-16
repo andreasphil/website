@@ -1,13 +1,32 @@
 ---
-layout: default
+title: Andreas’ digital garden 🌿
 ---
 
-<p class="text-h2">
-  Hi! I'm <strong>Andreas</strong>, a UX engineer from Hamburg. My background is in <a href="https://www.umu.se/en/education/master/masters-programme-in-human-computer-interaction-and-social-media/">human-computer interaction</a> and <a href="https://www.htwsaar.de/studium/studienangebot/bachelor/PI_BSC">computer science</a>. These days I build user interfaces for the web at <a href="https://ergosign.de">Ergosign</a>.
-</p>
+Amet quis et cumque libero temporibus exercitationem itaque! Maiores quidem
+tempora aliquam ullam provident Dignissimos sed rerum perferendis sint ducimus
+earum aliquid dignissimos optio, aliquam Vitae cupiditate fuga quae odit
+delectus? Pariatur rem cupiditate illo voluptas maiores? Eos alias officiis
+fugiat architecto mollitia repellat suscipit Impedit dolores deleniti vero
+aliquam commodi. Inventore officiis quia quam quos dolores. Ullam a facilis
+optio eaque tenetur Fuga exercitationem incidunt illum incidunt modi Eaque sit
+corporis incidunt atque fugit fugiat Animi debitis aliquid quos voluptates nam
+Fugiat ratione deserunt facere fugiat natus culpa veniam tempora Quasi quam
+veniam culpa corrupti quisquam Dignissimos nihil
 
-<p class="text-h2 mb-2">
-  Drop me an <a href="mailto:{{ meta.authorEmail }}">email</a>, or follow me around the web to see what I've been up to.
-</p>
+## Posts
 
-{% include 'elsewhere' %}
+<ul>
+  {% assign posts = collections.posts | reverse %}
+  {% for post in posts %}
+  <li><a href="{{- post.url -}}">{{- post.data.title -}}</a></li>
+  {% endfor %}
+</ul>
+
+## Elsewhere
+
+<ul>
+  {% for link in elsewhere %}
+  <li><a href="{{- link.url -}}">{{- link.title -}}</a></li>
+  {% endfor %}
+  <li><a href="#">Email me</a></li>
+</ul>
