@@ -13,7 +13,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("site/static")
 
   // Template configuration
-  eleventyConfig.setTemplateFormats(["html", "md"])
+  // eleventyConfig.setTemplateFormats(["html", "md"])
   eleventyConfig.setLiquidOptions({ dynamicPartials: true })
 
   // Paths
