@@ -1,4 +1,6 @@
 module.exports = eleventyConfig => {
+  eleventyConfig.setQuietMode(true);
+
   // Make browsersync play nice with turbolinks
   eleventyConfig.setBrowserSyncConfig({
     snippetOptions: {
@@ -10,16 +12,16 @@ module.exports = eleventyConfig => {
   })
 
   // Copy static assets
-  eleventyConfig.addPassthroughCopy("site/static")
+  eleventyConfig.addPassthroughCopy("site/assets")
 
   // Template configuration
-  // eleventyConfig.setTemplateFormats(["html", "md"])
+  eleventyConfig.setTemplateFormats(["html", "md"])
   eleventyConfig.setLiquidOptions({ dynamicPartials: true })
 
-  // Paths
-  const dir = { input: "site", output: "build" }
-
   return {
-    dir
+    dir: {
+      input: "site",
+      layouts: "_layouts",
+    }
   }
 }
