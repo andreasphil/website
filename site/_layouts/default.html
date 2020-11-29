@@ -2,11 +2,9 @@
 layout: base
 ---
 
-{% include 'header' %}
-
 <article class="content">
   {% if title %}
-  <h1>{{- title -}}</h1>
+  <div class="ui-headline">{{ title }}</div>
   {% endif %}
 
   {{ content }}

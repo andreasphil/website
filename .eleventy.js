@@ -1,14 +1,14 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.setQuietMode(true);
+  eleventyConfig.setQuietMode(true)
 
   // Make browsersync play nice with turbolinks
   eleventyConfig.setBrowserSyncConfig({
     snippetOptions: {
       rule: {
         match: /<\/head>/i,
-        fn: (snippet, match) => snippet + match
-      }
-    }
+        fn: (snippet, match) => snippet + match,
+      },
+    },
   })
 
   // Copy static assets
@@ -21,7 +21,8 @@ module.exports = eleventyConfig => {
   return {
     dir: {
       input: "site",
+      output: "output",
       layouts: "_layouts",
-    }
+    },
   }
 }

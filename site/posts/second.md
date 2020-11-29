@@ -1,5 +1,6 @@
 ---
 title: Mollitia assumenda quibusdam possimus quo obcaecati
+tags: posts
 ---
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat, mollitia assumenda quibusdam possimus quo obcaecati autem ab? Accusantium, mollitia doloribus modi perferendis temporibus ducimus adipisci nostrum expedita cupiditate optio deserunt aperiam officiis vitae, tenetur ad omnis et obcaecati quisquam voluptatibus dignissimos necessitatibus veritatis voluptas nihil odit. Aspernatur dolorum, dolore voluptates, libero qui expedita autem enim dicta, fugit odio sapiente labore cum dolorem alias beatae consequatur! Repudiandae, itaque neque adipisci veritatis commodi a quod tempore enim pariatur cum consequuntur ex maiores iusto veniam deleniti nemo error dolorem, officia optio earum dolore quidem suscipit officiis provident. Hic accusantium enim dolorem earum?

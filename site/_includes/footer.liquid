@@ -1,9 +1,16 @@
-<!-- <footer>
-  <a href="mailto:andreasphil@icloud.com">Email</a> &middot;
-  <a href="https://github.com/andreasphil">GitHub</a> &middot;
-  <a href="https://linkedin.com/in/andreas-philippi">Linked In</a>
-  <br>
+<footer class="footer">
+  <div class="footer__layout layout layout--max-w">
+    <div class="footer__left">
+      &copy; {{ "now" | date: "%Y" }} {{ meta.author }}
 
-  &copy; {{ "now" | date: "%Y" }} {{ meta.author }}.
-  <a href="/legal/">Legal and privacy</a>
-</footer> -->
+    </div>
+
+    <div class="footer__right">
+      <a href="mailto:{{ meta.elsewhere.email }}">Contact</a>
+      <a href="/legal/">Legal &amp; privacy</a>
+
+      {% assign source = meta.repository | append: "/blob/master/" | append: page.inputPath %}
+      <a href="{{ source }}">View Source</a>
+    </div>
+  </div>
+</footer>
