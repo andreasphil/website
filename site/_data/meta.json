@@ -1,9 +1,14 @@
 {
   "author": "Andreas Philippi",
-  "authorEmail": "andreasphil@icloud.com",
   "description": "",
   "keywords": "",
   "language": "en",
   "repository": "https://github.com/andreasphil/website",
-  "siteName": "Andreas' digital garden"
+  "siteName": "Andreas' digital garden",
+
+  "elsewhere": {
+    "email": "andreasphil@icloud.com",
+    "github": "https://github.com/andreasphil",
+    "linkedin": "https://www.linkedin.com/in/andreas-philippi"
+  }
 }
