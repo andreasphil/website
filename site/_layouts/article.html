@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include 'header' %}
+
+<main class="layout layout--base-w">
+  <article class="content">
+    {% if title %}
+    <div class="ui-headline">{{ title }}</div>
+    {% endif %}
+
+    {{ content }}
+  </article>
+</main>

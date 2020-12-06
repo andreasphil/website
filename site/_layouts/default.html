@@ -2,10 +2,8 @@
 layout: base
 ---
 
-<article class="content">
-  {% if title %}
-  <div class="ui-headline">{{ title }}</div>
-  {% endif %}
-
+<div class="layout layout--max-w">
   {{ content }}
-</article>
+</div>
+
+{% include 'footer' %}
