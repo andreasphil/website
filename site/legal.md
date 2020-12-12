@@ -12,7 +12,7 @@ This website is authored by:
   22309 Hamburg
 </address>
 
-To get in touch, drop me an email: [{{- meta.email -}}](mailto:{{- meta.email -}})
+To get in touch, drop me an email: [{{- meta.elsewhere.email -}}](mailto:{{- meta.elsewhere.email -}})
 
 ## Privacy policy
 

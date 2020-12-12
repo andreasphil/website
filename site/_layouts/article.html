@@ -4,10 +4,10 @@ layout: default
 
 {% include 'header' %}
 
-<main class="layout layout--base-w">
-  <article class="content">
+<main class="layout__inner-wrapper">
+  <article class="layout__container">
     {% if title %}
-    <div class="ui-headline">{{ title }}</div>
+    <h1 class="ui-headline">{{ title }}</h1>
     {% endif %}
 
     {{ content }}

@@ -7,8 +7,8 @@ $font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 $rem-base: 16px;
-$layout-max: 1440px;
-$layout-base: 680px;
+$layout-outer: 1280px;
+$layout-inner: 680px;
 $border-radius-base: 0.5rem;
 
 $font-size-h1: 2.5rem;
@@ -16,6 +16,9 @@ $font-size-h2: 1.5rem;
 $font-size-h3: 1.125rem;
 $font-size-large: 1.125rem;
 $font-size-small: 0.875rem;
+$font-weight-normal: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
 
 $line-height-base: 1.75;
 $line-height-snug: 1.5;
@@ -25,15 +28,31 @@ $transition-base: 0.3s ease;
 
 // Dynamic
 :root {
-  --color-primary: #8264fa;
+  --color-primary: hsl(250, 95%, 68%);
+  --color-primary-300: hsl(250, 70%, 68%);
+  --color-primary-200: hsla(250, 100%, 68%, 0.12);
+  --color-primary-100: hsla(250, 100%, 68%, 0.05);
 
-  --color-black: hsl(240, 10%, 25%);
-
-  --color-gray-300: hsl(240, 5%, 50%); // muted elements
+  --color-black: hsl(240, 10%, 20%);
+  --color-gray-300: hsl(240, 7%, 47%); // muted elements
   --color-gray-200: hsla(240, 10%, 10%, 0.09); // borders
   --color-gray-100: hsla(240, 10%, 10%, 0.02); // backgrounds
-
   --color-white: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: hsl(43, 95%, 66%);
+    --color-primary-300: hsl(45, 70%, 33%);
+    --color-primary-200: hsla(45, 100%, 66%, 0.1);
+    --color-primary-100: hsla(45, 100%, 66%, 0.03);
+
+    --color-black: hsl(0, 0%, 100%);
+    --color-gray-300: hsl(240, 7%, 53%); // muted elements
+    --color-gray-200: hsla(240, 10%, 80%, 0.09); // borders
+    --color-gray-100: hsla(240, 10%, 80%, 0.02); // backgrounds
+    --color-white: hsl(240, 10%, 7%);
+  }
 }
 
 /* -------------------------------------------------- *
@@ -50,53 +69,6 @@ html {
 }
 
 /* -------------------------------------------------- *
- * Typography                                         *
- * -------------------------------------------------- */
-
-h1,
-.h1 {
-  font-size: $font-size-h1;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-h2,
-.h2 {
-  font-size: $font-size-h2;
-  font-weight: bold;
-}
-
-h3,
-.h3 {
-  font-size: $font-size-h3;
-  font-weight: bold;
-}
-
-.text-large {
-  font-size: $font-size-large;
-}
-
-.text-small {
-  font-size: $font-size-small;
-}
-
-a {
-  border-bottom: 2px solid var(--color-gray-200);
-  color: var(--color-gray-300);
-  font-weight: 600;
-  padding-bottom: 0.125rem;
-  text-decoration: none;
-
-  transition: color $transition-base, border-color $transition-base,
-    background-color $transition-base;
-
-  &:hover {
-    border-color: var(--color-primary);
-    color: var(--color-black);
-  }
-}
-
-/* -------------------------------------------------- *
  * Utilities                                          *
  * -------------------------------------------------- */
 
@@ -108,6 +80,11 @@ a {
   > *:last-child {
     margin-bottom: 0;
   }
+}
+
+@mixin breakout() {
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 /* -------------------------------------------------- *
@@ -122,37 +99,89 @@ a {
 }
 
 .layout {
-  margin: 0 auto;
-  width: 100%;
-
-  &--max-w {
-    max-width: $layout-max;
+  &__outer-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $layout-outer;
     padding: 0 2rem;
   }
 
-  &--base-w {
-    max-width: $layout-base;
+  &__inner-wrapper {
+    margin: 0 auto 0 0;
+    width: 100%;
+    max-width: $layout-inner;
+  }
+
+  &__container {
+    @include trim;
+    padding: 4rem 0;
+
+    & + & {
+      border-top: 2px dotted var(--color-gray-200);
+    }
+
+    &:first-child {
+      padding-top: 8rem;
+    }
+
+    &:last-child {
+      padding-bottom: 8rem;
+    }
   }
 }
 
-.content {
-  @include trim;
-  margin: 8rem auto;
+/* -------------------------------------------------- *
+ * Typography                                         *
+ * -------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  line-height: $line-height-snug;
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+a {
+  background: transparent;
+  border-bottom: 2px solid var(--color-gray-200);
+  color: var(--color-gray-300);
+  font-weight: $font-weight-medium;
+  padding-bottom: 0.125rem;
+  text-decoration: none;
+
+  transition: color $transition-base, border-color $transition-base,
+    background-color $transition-base;
+
+  &:hover {
+    background: var(--color-primary-100);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
 }
 
 /* -------------------------------------------------- *
  * Components                                         *
  * -------------------------------------------------- */
 
-%ui-link {
+%ui__link {
+  background: transparent;
   border: none;
-  color: var(--color-gray-300);
+  font-size: $font-size-small;
   padding: 0;
   text-decoration: none;
-
-  &:hover {
-    color: var(--color-black);
-  }
 
   & + & {
     border-left: 1px solid var(--color-gray-200);
@@ -161,7 +190,7 @@ a {
   }
 }
 
-.ui-headline {
+.ui__headline {
   color: var(--color-primary);
   font-size: $font-size-small;
   font-weight: bold;
@@ -171,13 +200,13 @@ a {
 .header {
   display: flex;
   font-size: $font-size-small;
-  font-weight: 600;
+  font-weight: $font-weight-medium;
   justify-content: center;
   margin-bottom: 2rem;
   padding-top: 2rem;
 
   a {
-    @extend %ui-link;
+    @extend %ui__link;
   }
 }
 
@@ -204,16 +233,22 @@ a {
   }
 
   a {
-    @extend %ui-link;
+    @extend %ui__link;
   }
 }
 
 .intro {
-  font-size: $font-size-large;
+  h1,
+  p {
+    color: var(--color-black);
+    display: inline;
+    font-size: $font-size-h2;
+  }
 }
 
 .post-list {
-  margin: -0.75rem -1rem 0;
+  @include breakout;
+  margin-top: -0.75rem;
   padding: 0;
 
   &__item {
@@ -227,13 +262,17 @@ a {
     border: none;
 
     &:hover {
-      background-color: var(--color-gray-100);
+      background-color: var(--color-primary-100);
     }
   }
 }
 
 .project-list {
-  margin: -0.75rem -1rem 0;
+  @include breakout;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 12rem);
   padding: 0;
 
   &__item {
@@ -241,31 +280,63 @@ a {
   }
 
   &__link {
-    display: grid;
-    padding: 0.75rem 1rem;
+    align-content: space-between;
+    background: var(--color-gray-100);
+    border-radius: $border-radius-base;
     border-radius: $border-radius-base;
     border: none;
-    grid-template-columns: 2rem 1fr;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    padding: 1.25rem 1.5rem 1.25rem 0;
+    transition: box-shadow $transition-base, background-color $transition-base;
 
     &:hover {
-      background-color: var(--color-gray-100);
+      background-color: var(--color-primary-100);
+      box-shadow: 0 0 0 2px var(--color-primary),
+        0 0 0 6px var(--color-primary-200);
+
+      .project-list__icon {
+        background-color: var(--color-primary-200);
+      }
+
+      .project-list__title {
+        color: var(--color-primary);
+      }
+
+      .project-list__description {
+        color: var(--color-primary-300);
+      }
     }
   }
 
-  &__icon {
-    grid-column: 1 / 1;
-    grid-row: 1 / span 2; // TODO: grid end?
+  &__icon,
+  &__title,
+  &__description {
+    transition: color $transition-base, background-color $transition-base;
+  }
 
+  &__icon {
+    align-self: start;
+    background: var(--color-gray-100);
+    border-radius: 0 1em 1em 0;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0 0.5rem 0 1rem;
   }
 
   &__title {
-    grid-column: 2 / span 1;
+    color: var(--color-black);
+    grid-column: 2;
     grid-row: 1;
   }
 
   &__description {
-    grid-column: 2 / span 1;
-    grid-row: 2;
+    color: var(--color-gray-300);
+    font-size: $font-size-small;
     font-weight: normal;
+    grid-column: 2;
+    grid-row: 2;
   }
 }

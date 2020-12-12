@@ -1,15 +1,15 @@
 [
   {
     "title": "Stargaze",
-    "description": "Lorem ipsum dolor",
+    "description": "A beautiful and fast interface for browsing your starred repositories on GitHub",
     "icon": "🌟",
     "role": "Author",
     "repository": "https://#",
     "website": "https://stargaze.netlify.app"
   },
   {
-    "title": "Pseudo States Storybook Addon",
-    "description": "Lorem ipsum dolor",
+    "title": "Pseudo States Addon for Storybook",
+    "description": "View all of a component's pseudo states at once in the preview panel",
     "icon": "📚",
     "role": "Contributor",
     "repository": "https://#",
