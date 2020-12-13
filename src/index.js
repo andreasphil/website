@@ -1,6 +1,4 @@
-// Stylesheets
-import "sanitize.css"
-import "sanitize.css/assets.css"
-import "sanitize.css/typography.css"
+import turbolinks from "turbolinks"
 
-import "./styles.scss"
+turbolinks.setProgressBarDelay(50)
+turbolinks.start()

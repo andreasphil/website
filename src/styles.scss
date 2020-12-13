@@ -1,3 +1,6 @@
+@import "sanitize.css/sanitize.css";
+@import "sanitize.css/assets.css";
+
 /* -------------------------------------------------- *
  * Variables                                          *
  * -------------------------------------------------- */
@@ -28,8 +31,8 @@ $transition-base: 0.3s ease;
 
 // Dynamic
 :root {
-  --color-primary: hsl(250, 95%, 68%);
-  --color-primary-300: hsl(250, 70%, 68%);
+  --color-primary: hsl(250, 90%, 65%);
+  --color-primary-300: hsl(250, 70%, 62%);
   --color-primary-200: hsla(250, 100%, 68%, 0.12);
   --color-primary-100: hsla(250, 100%, 68%, 0.05);
 
@@ -42,15 +45,15 @@ $transition-base: 0.3s ease;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: hsl(43, 95%, 66%);
-    --color-primary-300: hsl(45, 70%, 33%);
+    --color-primary: hsl(43, 90%, 65%);
+    --color-primary-300: hsl(45, 70%, 36%);
     --color-primary-200: hsla(45, 100%, 66%, 0.1);
     --color-primary-100: hsla(45, 100%, 66%, 0.03);
 
     --color-black: hsl(0, 0%, 100%);
     --color-gray-300: hsl(240, 7%, 53%); // muted elements
-    --color-gray-200: hsla(240, 10%, 80%, 0.09); // borders
-    --color-gray-100: hsla(240, 10%, 80%, 0.02); // backgrounds
+    --color-gray-200: hsla(240, 10%, 95%, 0.1); // borders
+    --color-gray-100: hsla(240, 10%, 95%, 0.03); // backgrounds
     --color-white: hsl(240, 10%, 7%);
   }
 }
@@ -176,6 +179,11 @@ a {
  * Components                                         *
  * -------------------------------------------------- */
 
+.turbolinks-progress-bar {
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
 %ui__link {
   background: transparent;
   border: none;
@@ -294,8 +302,7 @@ a {
 
     &:hover {
       background-color: var(--color-primary-100);
-      box-shadow: 0 0 0 2px var(--color-primary),
-        0 0 0 6px var(--color-primary-200);
+      box-shadow: 0 0 0 2px var(--color-primary);
 
       .project-list__icon {
         background-color: var(--color-primary-200);
