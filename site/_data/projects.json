@@ -3,16 +3,13 @@
     "title": "Stargaze",
     "description": "A beautiful and fast interface for browsing your starred repositories on GitHub",
     "icon": "🌟",
-    "role": "Author",
-    "repository": "https://#",
     "website": "https://stargaze.netlify.app"
   },
   {
     "title": "Pseudo States Addon for Storybook",
-    "description": "View all of a component's pseudo states at once in the preview panel",
+    "description": "View all of a component's pseudo states at once in Storybook's preview panel",
     "icon": "📚",
     "role": "Contributor",
-    "repository": "https://#",
-    "website": "https://#"
+    "website": "https://github.com/Ergosign/storybook-addon-pseudo-states"
   }
 ]

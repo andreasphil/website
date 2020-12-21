@@ -32,7 +32,7 @@ $transition-base: 0.3s ease;
 // Dynamic
 :root {
   --color-primary: hsl(250, 90%, 65%);
-  --color-primary-300: hsl(250, 70%, 62%);
+  --color-primary-300: hsl(250, 50%, 55%);
   --color-primary-200: hsla(250, 100%, 68%, 0.12);
   --color-primary-100: hsla(250, 100%, 68%, 0.05);
 
@@ -52,8 +52,8 @@ $transition-base: 0.3s ease;
 
     --color-black: hsl(0, 0%, 100%);
     --color-gray-300: hsl(240, 7%, 53%); // muted elements
-    --color-gray-200: hsla(240, 10%, 95%, 0.1); // borders
-    --color-gray-100: hsla(240, 10%, 95%, 0.03); // backgrounds
+    --color-gray-200: hsla(240, 10%, 90%, 0.1); // borders
+    --color-gray-100: hsla(240, 10%, 90%, 0.03); // backgrounds
     --color-white: hsl(240, 10%, 7%);
   }
 }
@@ -145,12 +145,12 @@ h3 {
 }
 
 h1 {
-  color: var(--color-primary);
   font-size: $font-size-h1;
 }
 
 h2 {
   font-size: $font-size-h2;
+  margin: 4rem 0 1rem;
 }
 
 h3 {
@@ -175,6 +175,10 @@ a {
   }
 }
 
+address {
+  font-style: normal;
+}
+
 /* -------------------------------------------------- *
  * Components                                         *
  * -------------------------------------------------- */
@@ -185,17 +189,11 @@ a {
 }
 
 %ui__link {
-  background: transparent;
+  border-radius: $border-radius-base;
   border: none;
   font-size: $font-size-small;
-  padding: 0;
+  padding: 0 0.5rem;
   text-decoration: none;
-
-  & + & {
-    border-left: 1px solid var(--color-gray-200);
-    margin-left: 1rem;
-    padding-left: 1rem;
-  }
 }
 
 .ui__headline {
@@ -203,6 +201,28 @@ a {
   font-size: $font-size-small;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 1rem 0;
+
+  & + h1,
+  & + h2,
+  & + h3,
+  & + p {
+    margin-top: 0;
+  }
+}
+
+.icon {
+  background: var(--color-primary-200);
+  border-radius: 100%;
+  color: var(--color-primary);
+  display: inline-flex;
+  height: 1em;
+  transform: translateY(0.1em);
+  width: 1em;
+
+  svg {
+    height: 100%;
+  }
 }
 
 .header {
@@ -279,8 +299,10 @@ a {
   @include breakout;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fill, 12rem);
+  grid-auto-rows: 12rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  margin-bottom: 2rem;
+  margin-top: 1rem;
   padding: 0;
 
   &__item {
@@ -301,18 +323,19 @@ a {
     transition: box-shadow $transition-base, background-color $transition-base;
 
     &:hover {
-      background-color: var(--color-primary-100);
+      background: var(--color-primary-100);
       box-shadow: 0 0 0 2px var(--color-primary);
 
       .project-list__icon {
-        background-color: var(--color-primary-200);
+        background: var(--color-primary-200);
       }
 
       .project-list__title {
         color: var(--color-primary);
       }
 
-      .project-list__description {
+      .project-list__description,
+      .project-list__role {
         color: var(--color-primary-300);
       }
     }
@@ -320,6 +343,7 @@ a {
 
   &__icon,
   &__title,
+  &__role,
   &__description {
     transition: color $transition-base, background-color $transition-base;
   }
@@ -333,10 +357,25 @@ a {
     padding: 0 0.5rem 0 1rem;
   }
 
-  &__title {
-    color: var(--color-black);
+  &__title-wrapper {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  &__title {
+    color: var(--color-black);
+  }
+
+  &__role {
+    border-radius: 1em;
+    color: var(--color-gray-300);
+    display: inline-block;
+    font-size: $font-size-small;
+
+    &::before {
+      content: "·";
+      margin-right: 0.25rem;
+    }
   }
 
   &__description {

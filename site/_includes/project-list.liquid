@@ -4,9 +4,17 @@
     <a href="{{- project.website -}}" class="project-list__link">
       <span class="project-list__icon">{{- project.icon -}}</span>
 
-      <span class="project-list__title">{{- project.title -}}</span>
+      <span class="project-list__title-wrapper">
+        <span class="project-list__title">{{- project.title -}}</span>
 
-      <span class="project-list__description">{{- project.description -}}</span>
+        {% if project.role %}
+        <span class="project-list__role">{{- project.role -}}</span>
+        {% endif %}
+      </span>
+
+      <span class="project-list__description"
+        >{{- project.description -}}
+      </span>
     </a>
   </li>
   {% endfor %}
