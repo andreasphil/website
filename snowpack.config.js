@@ -5,7 +5,6 @@ module.exports = {
     src: "/static",
   },
   plugins: [
-    "@snowpack/plugin-sass",
     ["@snowpack/plugin-run-script", { cmd: "eleventy", watch: "$1 --watch" }],
   ],
   install: [],

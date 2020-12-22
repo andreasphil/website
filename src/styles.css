@@ -7,9 +7,6 @@
  * -------------------------------------------------- */
 
 :root {
-  // TODO: Font family
-  // TODO: Transitions
-
   --border-radius-base: 0.5rem;
   --layout-inner: 680px;
   --layout-outer: 1280px;
@@ -33,9 +30,9 @@
   --color-primary-100: hsla(250, 100%, 68%, 0.05);
 
   --color-black: hsl(240, 10%, 20%);
-  --color-gray-300: hsl(240, 7%, 47%); // muted elements
-  --color-gray-200: hsla(240, 10%, 10%, 0.09); // borders
-  --color-gray-100: hsla(240, 10%, 10%, 0.02); // backgrounds
+  --color-gray-300: hsl(240, 7%, 47%); /* muted elements */
+  --color-gray-200: hsla(240, 10%, 10%, 0.09); /* borders */
+  --color-gray-100: hsla(240, 10%, 10%, 0.02); /* backgrounds */
   --color-white: hsl(0, 0%, 100%);
 }
 
@@ -47,9 +44,9 @@
     --color-primary-100: hsla(45, 100%, 66%, 0.03);
 
     --color-black: hsl(0, 0%, 100%);
-    --color-gray-300: hsl(240, 6%, 53%); // muted elements
-    --color-gray-200: hsla(240, 10%, 90%, 0.1); // borders
-    --color-gray-100: hsla(240, 10%, 90%, 0.03); // backgrounds
+    --color-gray-300: hsl(240, 6%, 53%); /* muted elements */
+    --color-gray-200: hsla(240, 10%, 90%, 0.1); /* borders */
+    --color-gray-100: hsla(240, 10%, 90%, 0.03); /* backgrounds */
     --color-white: hsl(240, 10%, 7%);
   }
 }
@@ -159,6 +156,7 @@ hr {
   display: inline;
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
 }
 
 a {
