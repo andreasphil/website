@@ -1,21 +1,9 @@
-<ol class="project-list">
+<ul class="ui-list">
   {% for project in projects %}
-  <li class="project-list__item">
-    <a href="{{- project.website -}}" class="project-list__link">
-      <span class="project-list__icon">{{- project.icon -}}</span>
-
-      <span class="project-list__title-wrapper">
-        <span class="project-list__title">{{- project.title -}}</span>
-
-        {% if project.role %}
-        <span class="project-list__role">{{- project.role -}}</span>
-        {% endif %}
-      </span>
-
-      <span class="project-list__description"
-        >{{- project.description -}}
-      </span>
+  <li>
+    <a href="{{- project.website -}}">
+      {{- project.title -}}
     </a>
   </li>
   {% endfor %}
-</ol>
+</ul>

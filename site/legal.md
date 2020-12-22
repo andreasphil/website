@@ -2,6 +2,8 @@
 title: Legal and privacy
 ---
 
+<h1 class="ui-headline">{{ title }}</h1>
+
 ## Legal notice
 
 This website is authored by:
