@@ -10,16 +10,16 @@
   --border-radius-base: 0.5rem;
   --layout-inner: 680px;
   --layout-outer: 1280px;
-  --rem-base: 18px;
+  --rem-base: 16px;
 
-  --font-size-h1: 2.25rem;
-  --font-size-h2: 1.5rem;
-  --font-size-h3: 1.125rem;
-  --font-size-large: 1.125rem;
-  --font-size-small: 0.875rem;
-  --font-weight-bold: 700;
-  --font-weight-medium: 600;
-  --font-weight-normal: 400;
+  --transition-duration: 0.3s;
+
+  --font-size-h1: calc(2rem + 0.5vw);
+  --font-size-h2: calc(1.5rem + 0.25vw);
+  --font-size-h3: calc(1.125rem + 0.25vw);
+  --font-size-large: calc(1.125rem + 0.25vw);
+  --font-size-normal: calc(1rem + 0.15vw);
+  --font-size-small: calc(0.875rem + 0.15vw);
   --line-height-base: 1.75;
   --line-height-snug: 1.5;
   --line-height-tight: 1.375;
@@ -34,6 +34,16 @@
   --color-gray-200: hsla(240, 10%, 10%, 0.09); /* borders */
   --color-gray-100: hsla(240, 10%, 10%, 0.02); /* backgrounds */
   --color-white: hsl(0, 0%, 100%);
+
+  /* Based on sanitize.css/typography.css */
+  --font-family-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI",
+    "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Based on https://css-tricks.com/snippets/css/font-stacks/ */
+  --font-family-prose: "IBM Plex Serif", Constantia, "Lucida Bright",
+    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+    "Liberation Serif", Georgia, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +70,11 @@ html {
   background: var(--color-white);
   color: var(--color-black);
   font-size: var(--rem-base);
+  font-family: var(--font-family-prose);
+}
+
+body {
+  font-size: var(--font-size-normal);
   line-height: var(--line-height-base);
 }
 
@@ -104,11 +119,11 @@ html {
 }
 
 .layout__container:first-child {
-  padding-top: 8rem;
+  padding-top: clamp(4rem, 10vw, 8rem);
 }
 
 .layout__container:last-child {
-  padding-bottom: 8rem;
+  padding-bottom: clamp(4rem, 10vw, 8rem);
 }
 
 .layout__container + .layout__container {
@@ -121,29 +136,32 @@ html {
 
 h1,
 .h1 {
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   line-height: var(--line-height-snug);
 }
 
 h2,
 .h2 {
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   line-height: var(--line-height-snug);
   margin: 4rem 0 1rem;
 }
 
 h3,
 .h3 {
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   line-height: var(--line-height-snug);
 }
 
-address {
+/* address {
   font-style: normal;
-}
+} */
 
 hr {
   border: none;
@@ -154,18 +172,26 @@ hr {
 .intro {
   color: var(--color-black);
   display: inline;
+  font-family: var(--font-family-prose);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-medium);
   line-height: var(--line-height-snug);
+}
+
+.intro,
+.intro a {
+  font-weight: 600;
 }
 
 a {
   background: transparent;
   color: var(--color-gray-300);
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: var(--color-gray-200);
-  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(2px, 0.15em);
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, text-decoration-color, color;
 }
 
 a:hover {
@@ -186,6 +212,7 @@ a:hover {
 .ui-link {
   border-radius: var(--border-radius-base);
   border: none;
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
   padding: 0 0.5rem;
   text-decoration: none;
@@ -193,8 +220,9 @@ a:hover {
 
 .ui-headline {
   color: var(--color-primary);
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   text-transform: uppercase;
   margin: 1rem 0;
 }
@@ -214,34 +242,39 @@ a:hover {
 
 .ui-list a {
   border-radius: var(--border-radius-base);
-  border: none;
+  border-width: 0;
   display: block;
-  font-weight: var(--font-weight-normal);
-  padding: 0.5rem 1rem;
+  font-weight: normal;
+  padding: 0.75rem 1rem;
 }
 
 h2 + .ui-list {
-  margin-top: -0.5rem;
+  margin-top: -0.75rem;
 }
 
 .footer {
-  border-top: 2px dashed var(--color-gray-200);
   color: var(--color-gray-300);
   display: flex;
   flex-wrap: wrap;
+  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
   justify-content: space-between;
-  margin: 0 -1rem;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
-.footer__left {
+.footer__wrapper {
+  background: var(--color-gray-100);
+}
+
+.footer__left,
+.footer__right {
   flex: 0 0 auto;
-  padding: 0 1rem;
 }
 
 .footer__right {
   display: flex;
-  flex: 0 0 auto;
-  padding: 0 0.5rem;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem; /* Offset for the padding of the links */
+  max-width: 100%;
 }

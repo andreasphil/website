@@ -3,13 +3,10 @@ layout: base
 ---
 
 <div class="layout__outer-wrapper">
-  {% include 'header' %}
-
   <main class="layout__inner-wrapper">
-    <article class="layout__container trim">
-      {{ content }}
-    </article>
+    {% include 'header' %}
+    <article class="layout__container trim">{{ content }}</article>
   </main>
-
-  {% include 'footer' %}
 </div>
+
+{% include 'footer' %}
