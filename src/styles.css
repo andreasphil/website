@@ -29,25 +29,25 @@
   --color-primary-200: hsla(250, 100%, 68%, 0.12);
   --color-primary-100: hsla(250, 100%, 68%, 0.05);
 
-  --color-black: hsl(240, 10%, 20%);
-  --color-gray-300: hsl(240, 7%, 47%); /* muted elements */
-  --color-gray-200: hsla(240, 10%, 10%, 0.09); /* borders */
-  --color-gray-100: hsla(240, 10%, 10%, 0.02); /* backgrounds */
+  --color-black: hsl(250, 10%, 20%);
+  --color-gray-300: hsl(250, 5%, 47%); /* muted elements */
+  --color-gray-200: hsla(250, 10%, 10%, 0.09); /* borders */
+  --color-gray-100: hsla(250, 10%, 10%, 0.02); /* backgrounds */
   --color-white: hsl(0, 0%, 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: hsl(43, 90%, 65%);
-    --color-primary-300: hsl(45, 70%, 36%);
-    --color-primary-200: hsla(45, 100%, 66%, 0.1);
-    --color-primary-100: hsla(45, 100%, 66%, 0.03);
+    --color-primary: hsl(42, 90%, 65%);
+    --color-primary-300: hsl(42, 70%, 36%);
+    --color-primary-200: hsla(42, 100%, 66%, 0.1);
+    --color-primary-100: hsla(42, 100%, 66%, 0.03);
 
     --color-black: hsl(0, 0%, 100%);
-    --color-gray-300: hsl(240, 6%, 53%); /* muted elements */
-    --color-gray-200: hsla(240, 10%, 90%, 0.1); /* borders */
-    --color-gray-100: hsla(240, 10%, 90%, 0.03); /* backgrounds */
-    --color-white: hsl(240, 10%, 7%);
+    --color-gray-300: hsl(250, 5%, 53%); /* muted elements */
+    --color-gray-200: hsla(250, 10%, 90%, 0.1); /* borders */
+    --color-gray-100: hsla(250, 10%, 90%, 0.03); /* backgrounds */
+    --color-white: hsl(250, 10%, 7%);
   }
 }
 
