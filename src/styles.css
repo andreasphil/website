@@ -34,16 +34,6 @@
   --color-gray-200: hsla(240, 10%, 10%, 0.09); /* borders */
   --color-gray-100: hsla(240, 10%, 10%, 0.02); /* backgrounds */
   --color-white: hsl(0, 0%, 100%);
-
-  /* Based on sanitize.css/typography.css */
-  --font-family-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI",
-    "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  /* Based on https://css-tricks.com/snippets/css/font-stacks/ */
-  --font-family-prose: "IBM Plex Serif", Constantia, "Lucida Bright",
-    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
-    "Liberation Serif", Georgia, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,7 +60,6 @@ html {
   background: var(--color-white);
   color: var(--color-black);
   font-size: var(--rem-base);
-  font-family: var(--font-family-prose);
 }
 
 body {
@@ -109,7 +98,7 @@ body {
 }
 
 .layout__inner-wrapper {
-  margin: 0 auto 0 0;
+  margin: 0 auto;
   width: 100%;
   max-width: var(--layout-inner);
 }
@@ -136,7 +125,6 @@ body {
 
 h1,
 .h1 {
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-h1);
   font-weight: bold;
   line-height: var(--line-height-snug);
@@ -144,7 +132,6 @@ h1,
 
 h2,
 .h2 {
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-h2);
   font-weight: bold;
   line-height: var(--line-height-snug);
@@ -153,15 +140,10 @@ h2,
 
 h3,
 .h3 {
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-h3);
   font-weight: bold;
   line-height: var(--line-height-snug);
 }
-
-/* address {
-  font-style: normal;
-} */
 
 hr {
   border: none;
@@ -172,7 +154,6 @@ hr {
 .intro {
   color: var(--color-black);
   display: inline;
-  font-family: var(--font-family-prose);
   font-size: var(--font-size-h2);
   line-height: var(--line-height-snug);
 }
@@ -212,7 +193,6 @@ a:hover {
 .ui-link {
   border-radius: var(--border-radius-base);
   border: none;
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
   padding: 0 0.5rem;
   text-decoration: none;
@@ -220,7 +200,6 @@ a:hover {
 
 .ui-headline {
   color: var(--color-primary);
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
   font-weight: bold;
   text-transform: uppercase;
@@ -245,18 +224,15 @@ a:hover {
   border-width: 0;
   display: block;
   font-weight: normal;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 h2 + .ui-list {
-  margin-top: -0.75rem;
+  margin-top: -0.5rem;
 }
 
 .footer {
   color: var(--color-gray-300);
-  display: flex;
-  flex-wrap: wrap;
-  font-family: var(--font-family-ui);
   font-size: var(--font-size-small);
   justify-content: space-between;
   padding-bottom: 2rem;

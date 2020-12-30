@@ -1,18 +1,20 @@
 <footer class="footer__wrapper">
   <div class="layout__outer-wrapper footer">
-    <div class="footer__left">
-      &copy; {{ "now" | date: "%Y" }} {{ meta.author }}
-    </div>
+    <div class="layout__inner-wrapper">
+      <div class="footer__left">
+        &copy; {{ "now" | date: "%Y" }} {{ meta.author }}
+      </div>
 
-    <div class="footer__right">
-      <a class="ui-link" href="mailto:{{ meta.elsewhere.email }}">Contact</a>
-      <a class="ui-link" href="{{ meta.elsewhere.github }}">GitHub</a>
+      <div class="footer__right">
+        <a class="ui-link" href="mailto:{{ meta.elsewhere.email }}">Contact</a>
+        <a class="ui-link" href="{{ meta.elsewhere.github }}">GitHub</a>
 
-      {% assign source = meta.repository | append: "/blob/master/" | append:
-      page.inputPath %}
-      <a class="ui-link" href="{{ source }}">View Source</a>
+        {% assign source = meta.repository | append: "/blob/master/" | append:
+        page.inputPath %}
+        <a class="ui-link" href="{{ source }}">View Source</a>
 
-      <a class="ui-link" href="/legal/">Legal &amp; privacy</a>
+        <a class="ui-link" href="/legal/">Legal &amp; privacy</a>
+      </div>
     </div>
   </div>
 </footer>
