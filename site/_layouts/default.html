@@ -2,10 +2,9 @@
 layout: base
 ---
 
-<div class="layout__outer-wrapper">
-  <main class="layout__inner-wrapper">
-    <article class="layout__container trim">{{ content }}</article>
-  </main>
+<div class="layout">
+  {% include 'header' %}
+  <main class="content trim">{{ content }}</main>
 </div>
 
 {% include 'footer' %}

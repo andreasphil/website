@@ -6,14 +6,10 @@ module.exports = {
   },
   plugins: [
     ["@snowpack/plugin-run-script", { cmd: "eleventy", watch: "$1 --watch" }],
+    "@snowpack/plugin-postcss",
   ],
-  install: [],
-  installOptions: {},
   devOptions: {
     hmrDelay: 300, // give 11ty some time to finish
     open: "none",
   },
-  buildOptions: {},
-  proxy: {},
-  alias: {},
 }
