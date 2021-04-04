@@ -1,6 +1,10 @@
 ---
-title: Legal and privacy
+title: Legal stuff
 ---
+
+# Legal stuff
+
+## Imprint
 
 This website is authored by:
 

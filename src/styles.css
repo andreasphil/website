@@ -1,3 +1,252 @@
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
+@import "sanitize.css/sanitize.css";
+@import "sanitize.css/assets.css";
+@import "sanitize.css/typography.css";
+
+/* -------------------------------------------------- *
+ * Variables                                          *
+ * -------------------------------------------------- */
+
+:root {
+  --border-radius-base: 0.5rem;
+  --layout-width: 680px;
+  --rem-base: 16px;
+
+  --transition-duration: 0.2s;
+
+  --font-size-base: calc(1rem + 0.15vw);
+  --font-size-h1: calc(2rem + 0.5vw);
+  --font-size-h2: calc(1.5rem + 0.25vw);
+  --font-size-h3: calc(1.125rem + 0.25vw);
+  --font-size-large: calc(1.125rem + 0.25vw);
+  --font-size-small: calc(0.875rem + 0.2vw);
+  --line-height-base: 1.75;
+  --line-height-small: 1.5;
+  --line-height-xsmall: 1.25;
+
+  --prose-spacing-base: 1.5rem;
+
+  --color-black: hsl(250, 7%, 7%);
+  --color-gray-900: hsl(250, 3%, 50%); /* muted elements */
+  --color-gray-500: hsla(250, 7%, 92%); /* borders */
+  --color-gray-100: hsla(250, 7%, 96%); /* backgrounds */
+  --color-white: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-black: hsl(0, 0%, 100%);
+    --color-gray-900: hsl(250, 3%, 53%); /* muted elements */
+    --color-gray-500: hsla(250, 7%, 20%); /* borders */
+    --color-gray-100: hsla(250, 7%, 12%); /* backgrounds */
+    --color-white: hsl(250, 7%, 7%);
+  }
+}
+
+/* -------------------------------------------------- *
+ * Scaffolding                                        *
+ * -------------------------------------------------- */
+
+html {
+  background: var(--color-white);
+  font-size: var(--rem-base);
+  height: -webkit-fill-available;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-black);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+/* -------------------------------------------------- *
+ * Utilities                                          *
+ * -------------------------------------------------- */
+
+.trim > *:first-child {
+  margin-top: 0;
+}
+.trim > *:last-child {
+  margin-bottom: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+/* -------------------------------------------------- *
+ * Layout                                             *
+ * -------------------------------------------------- */
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: var(--layout-width);
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.content {
+  margin-bottom: clamp(4rem, 10vw, 8rem);
+  margin-top: clamp(4rem, 10vw, 8rem);
+}
+
+/* -------------------------------------------------- *
+ * Typography                                         *
+ * -------------------------------------------------- */
+
+h1,
+.h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 800;
+  line-height: var(--line-height-xsmall);
+  margin: 4rem 0 2rem 0;
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-small);
+  margin: 3rem 0 1.5rem 0;
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-small);
+  margin: 1.5rem 0;
+}
+
+.lead {
+  font-size: var(--font-size-large);
+  margin: 2rem 0;
+}
+
+blockquote {
+  border-left: 0.25rem solid var(--color-gray-100);
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 1rem;
+}
+
+pre {
+  background: var(--color-gray-100);
+  font-size: var(--font-size-small);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 1rem;
+}
+@media (min-width: 680px) {
+  pre {
+    border-radius: var(--border-radius-base);
+  }
+}
+
+img {
+  margin: 1.5rem 0;
+}
+
+a {
+  --link-color: var(--color-gray-900);
+  --link-decoration-color: var(--color-gray-500);
+
+  color: var(--link-color);
+  text-decoration-color: var(--link-decoration-color);
+  text-decoration-line: underline;
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, text-decoration-color, color;
+}
+a:hover {
+  --link-color: var(--color-black);
+  --link-decoration-color: var(--color-gray-900);
+}
+
+address {
+  font-style: normal;
+}
+
+/* -------------------------------------------------- *
+ * Components                                         *
+ * -------------------------------------------------- */
+
+.turbolinks-progress-bar {
+  height: 2px;
+  background-color: var(--color-black);
+}
+
+.ui-link:not(:hover) {
+  --link-decoration-color: transparent;
+}
+.ui-link + .ui-link {
+  margin-left: 1rem;
+}
+
+.header,
+.footer {
+  --vertical-spacing: clamp(1rem, 7.5vw, 2.5rem);
+}
+
+.header {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--vertical-spacing);
+  margin-top: var(--vertical-spacing);
+}
+
+.footer {
+  color: var(--color-gray-900);
+  font-size: var(--font-size-small);
+  padding-bottom: var(--vertical-spacing);
+  padding-top: var(--vertical-spacing);
+  text-align: center;
+}
+
+/* -------------------------------------------------- *
+ * Posts                                              *
+ * -------------------------------------------------- */
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+.post-list li {
+  align-items: baseline;
+  border-top: 1px solid var(--color-gray-500);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 1.5rem 0;
+}
+.post-list li:first-child {
+  border-top: none;
+  padding-top: 1rem;
+}
+.post-list a:not(:hover) {
+  --link-decoration-color: transparent;
+}
+.post-list h2 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-small);
+  margin: 0;
+}
+.post-list p {
+  color: var(--color-gray-900);
+  line-height: var(--line-height-small);
+  margin: 0.25rem 0 0 0;
+}
+.post-list__date {
+  color: var(--color-gray-900);
+  margin-right: 1rem;
+}
+
+.post__date {
+  display: block;
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+}
