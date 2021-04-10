@@ -1,5 +1,3 @@
-_site
-site/static
-.cache
-dist
+output
+build
 node_modules

@@ -1,4 +1,3 @@
-import turbolinks from 'turbolinks'
+import turbolinks from "turbolinks"
 
 turbolinks.start()
-turbolinks.setProgressBarDelay(0)
