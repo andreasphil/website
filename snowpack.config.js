@@ -11,4 +11,10 @@ module.exports = {
     hmrDelay: 300, // give 11ty some time to finish
     open: "none",
   },
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: "es2017",
+    sourcemap: "external",
+  },
 }

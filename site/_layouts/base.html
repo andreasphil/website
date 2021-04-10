@@ -11,11 +11,10 @@
     <title>{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}</title>
 
     <link rel="stylesheet" href="/static/styles.css" />
+    <script type="module" src="/static/index.js"></script>
   </head>
 
   <body class="cover">
     {{- content -}}
-
-    <script type="module" src="/static/index.js"></script>
   </body>
 </html>
