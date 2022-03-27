@@ -1,0 +1,25 @@
+---
+layout: default
+title: Notes
+---
+
+<h1>Notes</h1>
+
+<ol class="post-list">
+  {% for post in collections.posts reversed %}
+  <li>
+    <span class="post-list__date">{{- post.date | date: "%m/%y" -}}</span
+    ><span>
+      <h2>
+        <a href="{{- post.url -}}" style="color: var(--color-black)"
+          >{{- post.data.title -}}</a
+        >
+      </h2>
+
+      {% if post.data.excerpt %}
+      <p>{{- post.data.excerpt -}}</p>
+      {% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ol>

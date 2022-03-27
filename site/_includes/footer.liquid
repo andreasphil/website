@@ -1,0 +1,9 @@
+<footer class="layout footer">
+  <div>
+    <a class="ui-link" href="mailto:{{- meta.elsewhere.email -}}">Contact</a>
+    {% assign source = meta.repository | append: "/blob/main/" | append:
+    page.inputPath %}
+    <a class="ui-link" href="{{- source -}}">View Source</a>
+    <a class="ui-link" href="/legal/">Imprint &amp; privacy</a>
+  </div>
+</footer>
