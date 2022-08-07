@@ -6,7 +6,23 @@
     <title>Andreas Philippi</title>
 
     <style>
+      :root {
+        --bg-color: white;
+        --fg-color: black;
+        --link-color: blue;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: black;
+          --fg-color: white;
+          --link-color: deepskyblue;
+        }
+      }
+
       body {
+        background: var(--bg-color);
+        color: var(--fg-color);
         font-size: 1.2rem;
         line-height: 1.5;
         margin: 0;
@@ -28,9 +44,10 @@
       a,
       a:hover,
       a:visited {
-        color: blue;
+        color: var(--link-color);
       }
     </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main>
