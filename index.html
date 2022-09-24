@@ -2,65 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andreas Philippi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="hsl(260, 8%, 12%)" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
 
     <style>
+      @import url("https://cdn.jsdelivr.net/gh/andreasphil/fine@v0.6.0/dist/index.min.css")
+      layer(fine);
+
       :root {
-        --bg-color: white;
-        --fg-color: black;
-        --link-color: blue;
+        /* Calculated with https://clamping.andreasphil.com */
+        --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
+
+        --block-spacing-y: 1rem;
+        --container-max-width: 40rem;
+        --line-height: 1.8;
+        --theme-primary: 250 3% 49%;
+        --theme-tint: 250;
       }
 
-      @media (prefers-color-scheme: dark) {
+      @media (prefers-color-scheme: light) {
         :root {
-          --bg-color: black;
-          --fg-color: white;
-          --link-color: deepskyblue;
+          --c-bg: #fff;
         }
       }
 
-      body {
-        background: var(--bg-color);
-        color: var(--fg-color);
-        font-size: 1.2rem;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
+      h1 {
+        font-size: var(--font-size-h4);
       }
 
-      main {
-        margin: auto;
-        max-width: 640px;
-        padding: 4rem 1rem;
-      }
-      main > *:first-child {
-        margin-top: 0;
-      }
-      main > *:last-child {
-        margin-bottom: 0;
-      }
-
-      a,
-      a:hover,
-      a:visited {
-        color: var(--link-color);
+      em {
+        font-family: ui-serif, Apple Garamond, serif;
       }
     </style>
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main>
+    <main data-container data-trim="both">
       <h1>Hello, I&rsquo;m Andreas.</h1>
       <p>
         UX engineer building user interfaces for the web at
         <a href="https://ergosign.de/en">Ergosign.</a> Focused on Vue,
         performance, and the web platform. Learning Swift. Curious about Deno
-        and Go.
-      </p>
-      <p>
-        I value optimism, curiosity, and Deep Work. I enjoy spending time
-        outside, traveling, and tinkering with
+        and Go. I value optimism, curiosity, and Deep Work. I enjoy spending
+        time outside, traveling, and tinkering with
         <a href="https://github.com/andreasphil">code</a> for
         <a href="https://schroer.ca/2022/04/10/the-joy-of-small-projects/"
           >small projects.</a
