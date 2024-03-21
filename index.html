@@ -4,65 +4,53 @@
     <meta charset="UTF-8" />
     <title>Andreas Philippi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="hsl(260, 8%, 12%)" />
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
-
-    <style>
-      @import url("https://cdn.jsdelivr.net/gh/andreasphil/fine@v0.9.1/dist/index.min.css")
-      layer(fine);
-
-      :root {
-        /* Calculated with https://clamping.andreasphil.com */
-        --body-padding-y: clamp(2rem, 8.972vw - 0.125rem, 5rem);
-
-        --block-spacing-y: 1rem;
-        --container-max-width: 40rem;
-        --line-height: 1.8;
-        --theme-primary: 250 3% 49%;
-        --theme-tint: 250;
-      }
-
-      html {
-        font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand,
-          Comfortaa, Manjari, "Arial Rounded MT Bold", Calibri, source-sans-pro,
-          sans-serif;
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-          --c-bg: #fff;
-        }
-      }
-
-      h1 {
-        font-size: var(--font-size-h2);
-      }
-    </style>
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <main data-container data-trim="both">
-      <h1>Hello, I&rsquo;m Andreas.</h1>
-      <p>
-        UX engineer building user interfaces for the web at
-        <a href="https://new-work.se/en">New Work SE.</a> Focused on Vue,
-        performance, and the web platform. Learning Go. Curious about Deno
-        and Swift. I value optimism, curiosity, and Deep Work. I enjoy spending
-        time outside, traveling, and tinkering with
-        <a href="https://github.com/andreasphil">code</a> for
-        <a href="https://schroer.ca/2022/04/10/the-joy-of-small-projects/"
-          >small projects.</a
-        >
-      </p>
-      <p>Pursuing <em>less, but better.</em></p>
-      <p>
-        Currently based in
-        <a href="https://unsplash.com/s/photos/hamburg">Hamburg, Germany.</a>
-      </p>
-      <p>
-        Find me elsewhere: <a href="https://github.com/andreasphil">GitHub</a>,
-        <a href="mailto:hello@a13i.dev">email</a>
-      </p>
-    </main>
+    <div class="layout">
+      <main class="intro" data-trim="both">
+        <h1>Andreas Philippi ✌️</h1>
+        <p>
+          UX engineer focused on Vue, performance, and the web. Working on
+          digitalization for Germany with the the federal administration at
+          <a href="https://digitalservice.bund.de">DigitalService.</a> I value
+          optimism, curiosity, simplicity, and deep work.
+        </p>
+
+        <p>
+          Based in
+          <a href="https://unsplash.com/s/photos/hamburg">Hamburg.</a>
+          Find me elsewhere:
+          <a href="https://github.com/andreasphil">GitHub</a>,
+          <a href="mailto:hello@a13i.dev">email.</a>
+        </p>
+      </main>
+
+      <ul class="work">
+        <li><small>Current projects:</small></li>
+        <li>
+          <a
+            href="https://digitalservice.bund.de/projekte/neues-rechtsinformationssystem"
+          >
+            NeuRIS Norms
+          </a>
+        </li>
+        <li><a href="https://github.com/andreasphil/tasks">Tasks</a></li>
+        <li><a href="https://github.com/andreasphil/unbuild">Unbuild</a></li>
+        <li><a href="https://github.com/andreasphil/stargaze">Stargaze</a></li>
+        <li>
+          <a href="https://github.com/andreasphil/design-system">
+            Design System
+          </a>
+        </li>
+      </ul>
+    </div>
   </body>
+
+  <script type="module">
+    import { useThemeColor } from "./vendor/design-system@v0.25.0.js";
+    useThemeColor();
+  </script>
 </html>

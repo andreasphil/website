@@ -1,0 +1,60 @@
+@import url("./vendor/design-system@v0.25.0.min.css") layer(theme);
+
+@layer theme {
+  :root {
+    --block-spacing-y: 1.25rem;
+    --body-padding-x: 2rem;
+    --body-padding-y: 2rem;
+    --body-width: 100%;
+    --font-family: ui-sans-serif, system-ui, sans-serif;
+    --font-size-h1: 1em;
+    --line-height: 1.666;
+    --theme-primary: var(--theme-tint) 100% 60%;
+    --theme-tint: 215;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --c-bg: var(--white);
+    }
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: initial;
+}
+
+small {
+  color: var(--c-fg-variant);
+  font-weight: var(--font-weight-medium);
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--body-padding-y) * 2);
+}
+
+.intro {
+  max-width: 30rem;
+}
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  list-style-type: none;
+  margin: auto 0 0 0;
+  padding: 0;
+
+  li {
+    margin-top: 0;
+    white-space: nowrap;
+  }
+}
