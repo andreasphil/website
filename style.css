@@ -27,7 +27,7 @@ body {
 a {
   text-decoration-color: currentColor;
   text-decoration-thickness: 1px;
-  text-underline-offset: initial;
+  text-underline-offset: 2px;
 }
 
 small {
